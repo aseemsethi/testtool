@@ -1,0 +1,10 @@
+git
+===
+Converted the base repository into a GIT repository in github
+git init
+git add .
+git status
+git commit -m "Initial Commit"
+git remote add https://aseemsethi@github.com/aseemsethi/lexyacc.git
+git remote add origin https://aseemsethi@github.com/aseemsethi/lexyacc.git
+

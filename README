@@ -1,0 +1,144 @@
+This is a Monitor Application v2.0. Testing support for the following are implemented.
+- SSL Functionaland Performance
+- HTTP Performance
+- IKEv2 Functional and Performance
+
+Clone a new tree
+----------------
+git clone https://aseemsethi@github.com/aseemsethi/monitor.git
+
+Libraries to be installed:
+openssl, openssl-devel, curl, curl-devel, expat
+yum install gcc-c++
+
+The Monitor Application is a single binary called "mont_cust". This is spawned as follows :
+ For SSL Function Test: ./mont_cust 100 ssl
+ For SSL Performance Test: ./mont_cust 100 ssl_perf
+ For HTTP Test: ./mont_cust 100 http
+
+There are many Assessment Tools today that can also be used. One such list of tools is at https://github.com/ssllabs/research/wiki/Assessment-Tools.  A list of cve ids is maintained at: https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=openssl
+Some other tools that are used for HTTP testing are burp, wrk
+
+Executing
+=========
+There are 2 ways to run the tool
+a) Run it from shell "./mont_cust 100 openvpn". This reads the config from /var/,mont/100/config.json.
+b) Run it using the Django framework. For, this one needs to configure the various parameters in the Edit screen, and these then go as a parameter to the ./mont_cust program. Instead of reading the config file at /var/mont/100/config.json, it accepts another parameter, which is the configuration file in json format. From that point the code path is the same.
+
+Logging
+=======
+The SSL Test Process executes all tests, and write:
+- log file in /var/monT/<custID> - ssl_logs, ssl_perf_logs, http_logs
+- stat  file in /var/monT/<custID> - ssl_stats, ssl_perf_stats, http_stats
+
+Configuration Parsing
+=====================
+We use the jsmn parser from 
+	hg clone http://bitbucket.org/zserge/jsmn jsmn
+
+Example of Config on /var/monT/100/config.json
+"Params": "General"
+"custID": "100"
+"serverIP": "127.0.0.1"
+"#serverIP": "192.168.1.107"
+
+"Params": "SSL"
+"sslPort": "4433"
+"sslPerSec": "100"
+
+"Params": "SSL Perf"
+"totalConn": "20"
+"helloPerSec": "10"
+"totalHello": "20"
+
+"Params": "HTTP"
+"#url":"http://www.a1.test2.com/200.txt"
+"url":"http://www.yahoo.com"
+"httpVerbose": "0"
+"httpRepeat": "5"
+"httpParallel": "2"
+"pktSize": "200"
+
+"Params": "BGP"
+"version":"4"
+"myas":"1"
+"routerID":192.168.1.100
+"****Comment":"Withdrawn Info, withdrawn-len is ignored"
+"withdrawn len": "0"
+"withdrawn prefix": "32"
+"withdrawn route": "100.2.3.5"
+"withdrawn prefix": "32"
+"withdrawn route": "100.2.3.4"
+"withdrawn prefix": "24"
+"withdrawn route": "5.6.7.0"
+"****Comment":"Path Attr Len is bytes following this field - ignored"
+"****Comment":"Path Attr need to have all fields, F, T, L and Val in config"
+"path attribute len":"0"
+"path flag": "64"
+"path type": "1"
+"path len": "1"
+"path value": "0"
+"path flag": "64"
+"path type": "2"
+"path len": "0"
+"path value": "0"
+"path flag": "64"
+"path type": "3"
+"path len": "4"
+"path value nexthop": "192.168.1.0"
+"****Comment":"NLRI fields"
+"nlri len":"32"
+"nlri prefix":"100.101.102.103"
+"repeat nlri":"20"
+"repeat update":"1"
+
+HTTP Tool
+========
+For httpRepeat times, the HTTP Tool will do a parallel get using httpParallel threads. Each thread will be loaded with either the given url param, or from the code, if no url is provided.
+
+BGP Tool
+========
+This tool can be used for negative testing. One can change attributes from version to other fields to test BGP peer.
+
+Config: Set routerID to be the ID of you own BGP machine, i.e. this simulator
+"withdrawn Len" - is the len of bytes following this field, and consists of 1 or more pairs of "withdrawn prefix" + "withdrawn route".
+Note that the "Withdrawn Len" and "Path Attribute Len" is set to 0 in the config. The code calculates the length of these 2 fields, depending on the configuration provided.
+Running: Run the bgp tool by "./mont_cust 100 bgp". The tool first connects using TCP to the peer router, given by the "server IP" in the General Section at top of the config file.
+Then it sends an BGP OPEN message to the peer. It then awaits a BGP KEEPALIVE to the peer. It then awaits a BGP UPDATE message from the peer, and on receipt it sends an BGP Update message to the peer.
+The Withdrawn Routes and Advertised routes are advertised in this Update message.
+If "repeat nlri" is set to non-zero value, then the 1st nlri-len/prefix value is taken and repeated "repeat nlri" times, each time, incrementing the lowest byte of the "nlri preifx" by 1.
+If "repeat delay" is set, then after every 800 routes sent in 1 packet, there is a sleep of "repeat delay" seconds, before the next 800 routes are sent.
+If "repeat update" is set to a non-zero value, an UPDATE advertising NLRI routes is sent, followed by another UPDATE withdrawing all NLRI routes. This is repeated "nlri update" number of times.
+
+BGP Shell:
+When the tool runs, after the built in tests, it drops to a shell. Here you need to give the following commands
+bgp    -- this puts the tool in “bgp” mode.  Type “exit” to get out of this mode. You will also notice that the prompt changes from “proto>” to “bgp>”, when in “bgp” mode.
+update xxxx   - this sends an update with the contents of the file. As of now, it just repeats the Update packet it sent out last, but I will add the logic for it to read the file xxxx and send its contents by tomorrow.
+withdraw xxxx   - this sends an update-withdraw with the contents of the file. As of now, it just repeats the Update-Withdraw packet it sent out last, but I will add the logic for it to read the file xxxx and send its contents by tomorrow.
+
+BGP Test Tool:
+Edit /usr/local/etc/bird.conf as follows, and start bird as: bird -d
+- source address is the address of eth0 on the bird m/c, and 
+- local is AS number of this bird m/c.
+protocol bgp {
+	local as 1111;
+	neighbor 192.168.1.106 as 1;
+	multihop;
+	source address 192.168.1.110;
+	import all;
+}
+
+SSL Versions and Recommendations
+================================
+SSL 2.0 released in 1995 should no longer be used at all. 
+SSL 2.0 was declared insecure primarily due to its re-use of encryption
+keys as well as its lack of integrity checking of the SSL handshake
+sequence.
+A server using TLS 1.0 should select cipher RC4 for encryption 
+during the cipher negotiation for HTTPS traffic to mitigate against 
+the BEAST attack. 
+
+NOTES:
+======
+If RSA is used for both Key Exchange (Encryption) and Authentication, then if the key is lost tomorrow to a hacker, the hacker could use that key to get all past data. This is becuase we reused the same key for 2 things - auth and encyption. Thus, DHE_RSA was done, wherein Ephemeral keys in DH were used to generate shared secret, and were signed by RSA for authentication. This info is sent in Server Key Exchange message.
+
