@@ -4,7 +4,7 @@ bin/tool
 #bin
 bin/libjsmn.a
 bin/parse
-bin/lex.yy.o  
+bin/lex.yy.o
 bin/tool  
 bin/y.tab.o
 

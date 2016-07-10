@@ -6,6 +6,7 @@ int yylex(void);
 
 %union { char *s; int i; } 
 %token PROTOCOL BGP OV SHOW HELP CMD END ERROR NL
+%token UPDATE WITHDRAW
 
 %%
 config: lines config
@@ -13,6 +14,7 @@ config: lines config
 		;
 lines:	expr NL
 		| cmds NL
+		| bgpCmds NL
 		| NL
 		;  		
 expr:   PROTOCOL BGP     { printf("Set protocol to BGP\n"); }
@@ -24,6 +26,13 @@ cmds:	SHOW CMD        { printf("...SHOW %s\n", $2.s); }
 		| SHOW HELP		{ printf("...Help Cmds"); }
 		| SHOW			{ printf("...Please enter param"); }
 		| CMD			{ printf("...Invalid command %s\n", $1.s); }
+		;
+bgpCmds: UPDATE CMD		{ printf("...update %s\n", $2.s); 
+							CLIsendUpdate($2.s);}	
+		| WITHDRAW CMD	{ printf("...withdraw %s\n", $2.s); 
+							CLIsendWithdraw($2.s);}		
+		| UPDATE		{ printf("...Please enter file"); }
+		| WITHDRAW		{ printf("...Please enter file"); }
 		;
 
 %%

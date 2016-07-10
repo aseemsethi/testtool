@@ -14,6 +14,8 @@ void yyerror(char*);
 <PROTOCOL_s>openvpn	{printf("openvpn>"); BEGIN OV_s; return OV;}
 <PROTOCOL_s>[A-Za-z0-9]+	{printf("error!"); BEGIN 0; return ERROR;}
 <BGP_s>show			{return SHOW;}
+<BGP_s>update		{return UPDATE;}
+<BGP_s>withdraw		{return WITHDRAW;}
 <BGP_s>help			{printf("bgp>"); return HELP;}
 <BGP_s>end			{printf("proto>"); BEGIN 0; return END;}
 <BGP_s>[A-Za-z0-9]+	{yylval.s = strdup(yytext); return CMD;}
