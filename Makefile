@@ -9,7 +9,8 @@ CFLAGS = -g
 LEX = lex
 CLI_OBJS = bin/lex.yy.o bin/y.tab.o
 
-csrc = $(wildcard common/*.c)
+csrc = $(wildcard common/*.c) \
+		$(wildcard bgp/*.c)
 
 obj = $(csrc:.c=.o)
 

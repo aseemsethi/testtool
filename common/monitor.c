@@ -38,12 +38,10 @@ startBgpThread (jsonData_t* jsonData) {
 	
 	// Create BGP thread
 	log_debug(flog, "CUST: Create BGP thread.."); fflush(flog);
-/*
 	if (pthread_create(&httpPID, NULL, bgpStart, (void*)jsonData)) {
 		log_error(flog, "Error creating BGP Thread"); fflush(flog);
 		exit(1);
 	}
-*/
 	fflush(flog);
 }
 
