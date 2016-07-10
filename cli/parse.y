@@ -32,7 +32,7 @@ void yyerror(char *s)
 	fprintf(stderr,"%s\n",s);
 	return;
 }
-int mainParser(void)
+int cliLoop (void)
 {
 	int yydebug=1;
 	//yyin = fopen(argv[1], "r");

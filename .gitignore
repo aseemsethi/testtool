@@ -1,4 +1,5 @@
-./tool
+tool
+bin/tool
 
 #bin
 bin/libjsmn.a
@@ -19,6 +20,8 @@ parser/y.tab.h
 parser/lex.yy.c
 parser/lex.yy.o
 parser/parse
+
+common/*.o
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

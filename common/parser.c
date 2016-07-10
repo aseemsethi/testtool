@@ -5,7 +5,7 @@
 #include "../jsmn/jsmn.h"
 #include "parser.h"
 
-int mainParser(void);
+//int cliLoop(void);
 
 static int jsoneq(const char *json, jsmntok_t *tok, const char *s) {
     if (tok->type == JSMN_STRING && (int) strlen(s) == tok->end - tok->start &&
@@ -167,11 +167,13 @@ jsonData_t* parse (char* id, FILE *flog, char* configFile) {
 	return jsonData;
 }
 
+/*
 main() {
 	FILE *fc;
 	jsonData_t* jsonData;
 
 	fc = fopen("/var/monT/100/config.json", "a");
 	jsonData = parse("100", stdout, NULL);
-	mainParser();
+	cliLoop();
 }
+*/
