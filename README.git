@@ -1,0 +1,50 @@
+GIT Tutorial
+=============
+Clone a new tree
+----------------
+git clone https://aseemsethi@github.com/aseemsethi/monitor.git
+
+GIT Readme for 1st time repo into github
+-----------------------------------------
+cd ~mont
+git init
+git add *
+git commit -m "Initial Commit"
+git remote add origin https://aseemsethi@github.com/aseemsethi/mont
+git push -u origin master
+
+Set username and email
+----------------------
+git config --global user.name "Aseem Sethi"
+git config --global user.email aseemsethi@yahoo.com
+[asethi@centos6 ~]$ more .gitconfig 
+[user]
+        name = Aseem Sethi
+        email = aseemsethi@yahoo.com
+
+For committing a file into repo (e.g. README)
+---------------------------------------------
+git status
+git checkout -- filename // to undo all your changes in the filename
+git add README 
+git commit
+git push -u origin master
+
+Check remote status
+-------------------
+git remote -v
+git remote show origin
+
+TAGS
+----
+git tag -a v1.1 -m "Remember point 1.1"
+git show tag
+git push origin v1.1
+git checkout -b aseem v1.1
+
+Misc
+-----
+git config -e // for editing the config file
+git log -p -2
+git pull //pulls and merges latest data from repo
+git fetch // pulls data but does not merge

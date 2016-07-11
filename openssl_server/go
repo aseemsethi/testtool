@@ -1,0 +1,2 @@
+openssl s_server -key www.key -cert webserver.crt -debug -state -msg
+

@@ -1,0 +1,138 @@
+Install Django
+==============
+Install virtualenv and Postgres DB as outlined in the next sections. Then install django as
+$ source venv/bin/activate
+$ pip install psycopg2
+$ pip install Django
+$ django-admin startproject myMonitor .
+$ cd myMonitor/
+$ python manage.py startapp myApp
+......Add myApp in settings.py apps
+$ python manage.py makemigrations
+$ python manage.py migrate
+.....Now go to web browser and type in 127.0.0.1:8000
+
+Note: "pip freeze" gives the following output
+Django==1.9.5
+psycopg2==2.6.1
+
+Verify the installation of python and Django
+$ python -c "import django; print(django.__path__)"
+$ python -c "import django; print(django.VERSION)"
+
+Setup Postgres DB
+=================
+sudo su - postgres
+bash> createuser -P
+** create a user called myMonitorUser
+bash> createdb --owner myMonitorUser myMonitorDB
+** create a DB
+bash> psql -U postgres -l
+** To list all Databases in postgres
+exit
+
+Add the following to /home/asethi/monT/myMonitor/myMonitor/settings.py
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'myMonitorDB',
+        'USER': 'myMonitorUser',
+        'PASSWORD': 'pinewood',
+        'HOST': 'localhost',
+        'PORT': '',
+
+In  /var/lib/pgsql/9.4/data, modify pg_hba.conf to authenticate using 
+Postgress user database, by changing "ident" to "md5". Use the following
+line:
+# IPv4 local connections:
+host    all             all             127.0.0.1/32            md5
+
+Django Changes to add a project
+===============================
+Ref: http://code.techandstartup.com/django/admin/
+$ source venv/bin/activate
+Add the following to myMonitor/settings.py in TEMPLATES section
+        'DIRS': ['/home/asethi/monT/myMonitor/templates'],
+Add the following to urls.py
+    url(r'^$', 'myApp.views.home', name='home'),
+    url(r'^about/$', 'myApp.views.about', name='about'), 
+  The 1st arg is URL, 2nd arg is the directory/file/function() that is called,
+  and the 3rd gives the URL a variable name. Makes it easy to change the URL, as
+  longs as it is referenced by the variable throughout the code.
+Add the following to copy all static files into the "static" directory
+python manage.py collectstatic
+Run the Server as follows:
+$python manage.py runserver
+Add username/password to access the 127.0.0.:8000/admin site:
+
+Add a model
+===========
+$ python manage.py createsuperuser
+Add myApp to INSTALLED_APPS in settings.py
+Modify models.py to add a class based on models.Model:
+Modify the admin.py so that the DB can be modified from 127.0.0.0:8000/admin site
+$ python  manage.py makemigrations
+$ python manage.py migrate
+
+
+To Enable email via Google SMTP, enable the following:
+https://www.google.com/settings/security/lesssecureapps
+
+Instal Virtualenv
+==================
+First install openssl and openssl-devel before we compile python code
+# yum install openssl openssl-devel
+
+Download openssl
+# wget https://www.openssl.org/source/openssl-1.0.1s.tar.gz
+# tar -zxvf openssl-1.0.1s.tar.gz 
+# ./config 
+# make depend
+# make
+# make instal
+
+Install a local version of python that you want to use with django 1.9.5
+# mkdir localpython
+# cd localpython/
+# mkdir 3.4
+# wget https://www.python.org/ftp/python/3.4.0/Python-3.4.0.tgz 
+# ./configure --prefix=/home/asethi/python-ver/3.4/ --with-ensurepip=install
+# make
+# make install
+
+Now, create a virtualenv with the above Python version
+# virtualenv -p python-ver/3.4/bin/python3.4 venv
+
+
+
+Install Postgres
+================
+Ref: https://wiki.postgresql.org/wiki/YUM_Installation
+
+$ /etc/yum.repos.d/CentOS-Base.repo
+Add exclude=postgresql* to base/updates section
+
+$ yum localinstall http://yum.postgresql.org/9.4/redhat/rhel-6-x86_64/pgdg-centos94-9.4-1.noarch.rpm
+$ yum list postgres*
+$ yum install postgresql94-server
+
+All databases are kept here
+$ls /var/lib/pgsql/9.4/data
+
+The first command (only needed once) is to initialize the database in PGDATA.
+Typically initdb creates a table named "postgres" owned by user "current logged in user name"
+$ service postgresql-9.4 initdb
+
+Start postgress whenever m/c starts
+$ chkconfig postgresql-9.4 on
+
+Start postgress
+$ service postgresql-9.4 start
+
+To erase the installation
+$ yum erase postgresql94*
+
+# install the python postgres package
+
+# To check where DB is created 
+$ ps aux | grep postgres | grep -- -D
+
+Backup:  $ pg_dump -U {user-name} {source_db} -f {dumpfilename.sql}

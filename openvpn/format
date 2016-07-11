@@ -1,0 +1,42 @@
+OpenVPN Header Format is divided into 2 parts
+1) Packet Header
+2) Payload Header
+
+1) Packet Header
+TCP/UDP packet format:
+ *   Packet length (16 bits, unsigned) -- TCP only, always sent as plaintext.
+ *   Packet opcode/key_id (8 bits) -- TLS only, not used in pre-shared secret.
+ *            OpCode(high 5 bits) and key_id (low 3 bits)
+ *   Payload (n bytes), which may be a P_CONTROL, P_ACK, or P_DATA message.
+
+2) Payload Header - is of 2 types. One for control and other for data - below
+P_CONTROL message format:
+ *   local session_id (random 64 bit value to identify TLS session).
+ *   HMAC signature of entire encapsulation header for integrity
+ *       check if --tls-auth is specified (usually 16 or 20 bytes).
+ *   packet-id for replay protection (4 or 8 bytes, includes
+ *       sequence number and optional time_t timestamp).
+ *   P_ACK packet_id array length (1 byte).
+ *   P_ACK packet-id array (if length > 0).
+ *   P_ACK remote session_id (if length > 0).
+ *   message packet-id (4 bytes).
+ *   TLS payload ciphertext (n bytes) (only for P_CONTROL).
+
+* P_DATA message content:
+ *   HMAC of ciphertext IV + ciphertext (if not disabled by --auth none).
+ *   Ciphertext IV (size is cipher-dependent, if not disabled by --no-iv).
+ *   Tunnel packet ciphertext.
+ *
+ * P_DATA plaintext
+ *   packet_id (4 or 8 bytes, if not disabled by --no-replay).
+ *       In SSL/TLS mode, 4 bytes are used because the implementation
+ *       can force a TLS renegotation before 2^32 packets are sent.
+ *       In pre-shared key mode, 8 bytes are used (sequence number
+ *       and time_t value) to allow long-term key usage without
+ *       packet_id collisions.
+ *   User plaintext (n bytes).
+
+Get the certificates the OpenVPS server is using by the following process:
+# cd /usr/local/openvpn-as
+# ../../bin/sqlite3 certs.db .dump > certs.tmp
+

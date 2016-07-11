@@ -1,0 +1,20 @@
+Use libcurl here to send various packets
+
+Relvant JSON config
+===================
+"Params": "HTTP"
+"url":"http://www.yahoo.com"
+"httpVerbose": "0"
+"httpSessions": "20"
+"httpParallel": "2"
+"pktSize": "200"
+
+
+Test Cases:
+===========
+Open TCP connection to URL: yahoo.com
+Open 2 parallel sessions, and do 1 HTTP GETs on each of these paralled sessions
+to the above URL.
+Repeat the above for "httpSessions" count
+Tear down the TCP sessions
+Log results 

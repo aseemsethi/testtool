@@ -1,0 +1,68 @@
+Install Server
+===============
+[root@centos6 Downloads]# rpm -ivh openvpn-as-2.1.0-CentOS6.x86_64.rpm 
+
+The Access Server has been successfully installed in /usr/local/openvpn_as
+Configuration log file has been written to /usr/local/openvpn_as/init.log
+Please enter "passwd openvpn" to set the initial
+administrative password, then login as "openvpn" to continue
+configuration here: https://10.0.2.15:943/admin
+To reconfigure manually, use the /usr/local/openvpn_as/bin/ovpn-init tool.
+
+Access Server web UIs are available here:
+Admin  UI: https://10.0.2.15:943/admin
+Client UI: https://10.0.2.15:943/
+
+Install Client
+================
+yum install openvpn
+root@centos6 Downloads]# openvpn --version
+OpenVPN 2.3.11 x86_64-redhat-linux-gnu [SSL (OpenSSL)] [LZO] [EPOLL] [PKCS11] [MH] [IPv6] built on May 10 2016
+
+Client .ovpn file
+=================
+Get the client.ovpn from https://10.0.2.15:943/, and download the "profile", afeter loggin in with the linux username/password.
+
+Now, start openvpn client with this client.ovpn profile to connect to the openvpn_as server.
+
+Configuration Dumps
+===================
+Main config file is at /usr/local/openvpn_as/etc/as.conf
+All configs are stored in sqlite3 DB
+
+To see the configs do the following step:
+# ../../bin/sqlite3 certs.db .dump > tmp.certs
+The config can also be retrieved using "confdba" script to Dump config in JSON
+/usr/local/openvpn_as/scripts/confdba -a
+
+HMAC Calculation for tls-auth
+==============================
+1) Go to /usr/local/openvpn_as/etc/db
+2) Dump the certs in Text format
+# ../../bin/sqlite3 certs.db .dump > tmp.certs
+3) Search the file for the tls_auth key
+-----BEGIN OpenVPN Static key V1-----
+d8cb7f984684431f75f8895e244de77d
+ea3a5c4e559b217a39a1c4d7e0235a50
+dac091004acba188cc20796545db3899
+83f8e156e064f82c9e30c1961472474c
+[25211f2f4e2a500d133f19e24cd5f506    <==== This is server out key for HMAC calc
+c0a7e6f0i]88d620d3df2ab208800c6ad6
+4015aebf304d6b01bbf9f5e6333aace1
+e1fcff34545cf46044e2e33b7110da8d
+b36b0ba225c289ad790477dcaeb3fc27
+e1c2f498912403dc661921eef9fd47be
+d857e6eba6d531381c35dcaffbf901db
+5ceb0d1db9454026df49f21470319a66
+[ac3c20bbb7548d9a8d9c9fdd76de2214     <=== This is server in key for HMAC verify
+25fccc07]8521735a88d5f04c9d62d033
+82e280ece65d1179694d5efeca1b55c1
+ccd42367c3f1cac4df452028a925c2d3
+-----END OpenVPN Static key V1-----
+4)
+For initial Control Pkts, this is how the HMAC is done
+a) Copy HMAC + Pkt ID + Timestamp to the start of the buffer, and copy OpCode + Key + Session ID to the place after the HMAC+PktID+Timestamp. Basically swap these two data entries in the pkt
+b) Now calculate the HMAC using the openssl hmac_* API from PktID+Timestam+Rest of Data.
+c) Put this HMAC value back into the original pkt - its size is 20 bytes. This is a HMAC-SHA1 calculation.
+d) Send the pkt to the server
+

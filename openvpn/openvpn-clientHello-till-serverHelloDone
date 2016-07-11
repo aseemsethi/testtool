@@ -1,0 +1,792 @@
+No.     Time           Source                Destination           Protocol Length Info
+      1 0.000000000    10.0.2.15             10.0.2.15             OpenVPN  86     MessageType: P_CONTROL_HARD_RESET_CLIENT_V2
+
+Frame 1: 86 bytes on wire (688 bits), 86 bytes captured (688 bits) on interface 2
+Linux cooked capture
+Internet Protocol Version 4, Src: 10.0.2.15 (10.0.2.15), Dst: 10.0.2.15 (10.0.2.15)
+User Datagram Protocol, Src Port: 49782 (49782), Dst Port: 1194 (1194)
+OpenVPN Protocol
+
+0000  00 00 03 04 00 06 00 00 00 00 00 00 00 00 08 00   ................
+0010  45 00 00 46 00 00 40 00 40 11 22 8a 0a 00 02 0f   E..F..@.@.".....
+0020  0a 00 02 0f c2 76 04 aa 00 32 18 61 38 00 00 00   .....v...2.a8...
+0030  00 00 00 00 01 22 24 1a 13 e7 3e 58 15 bd 66 93   ....."$...>X..f.
+0040  b7 9e f1 94 d7 1d 78 9e 03 00 00 00 01 57 68 28   ......x......Wh(
+0050  48 00 00 00 00 00                                 H.....
+
+No.     Time           Source                Destination           Protocol Length Info
+      2 0.000325669    10.0.2.15             10.0.2.15             OpenVPN  98     MessageType: P_CONTROL_HARD_RESET_SERVER_V2
+
+Frame 2: 98 bytes on wire (784 bits), 98 bytes captured (784 bits) on interface 2
+Linux cooked capture
+Internet Protocol Version 4, Src: 10.0.2.15 (10.0.2.15), Dst: 10.0.2.15 (10.0.2.15)
+User Datagram Protocol, Src Port: 1194 (1194), Dst Port: 49782 (49782)
+OpenVPN Protocol
+
+0000  00 00 03 04 00 06 00 00 00 00 00 00 00 00 08 00   ................
+0010  45 00 00 52 00 00 40 00 40 11 22 7e 0a 00 02 0f   E..R..@.@."~....
+0020  0a 00 02 0f 04 aa c2 76 00 3e 18 6d 40 24 bc a6   .......v.>.m@$..
+0030  16 e2 b1 e6 43 ee 9f 28 58 31 51 ec ce 17 8a 48   ....C..(X1Q....H
+0040  1d ce b4 5c 63 44 4d 77 94 00 00 00 01 57 68 28   ...\cDMw.....Wh(
+0050  48 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00   H...............
+0060  00 00                                             ..
+
+No.     Time           Source                Destination           Protocol Length Info
+      3 0.004786378    10.0.2.15             10.0.2.15             OpenVPN  94     MessageType: P_ACK_V1
+
+Frame 3: 94 bytes on wire (752 bits), 94 bytes captured (752 bits) on interface 2
+Linux cooked capture
+Internet Protocol Version 4, Src: 10.0.2.15 (10.0.2.15), Dst: 10.0.2.15 (10.0.2.15)
+User Datagram Protocol, Src Port: 49782 (49782), Dst Port: 1194 (1194)
+OpenVPN Protocol
+
+0000  00 00 03 04 00 06 00 00 00 00 00 00 00 00 08 00   ................
+0010  45 00 00 4e 00 00 40 00 40 11 22 82 0a 00 02 0f   E..N..@.@.".....
+0020  0a 00 02 0f c2 76 04 aa 00 3a 18 69 28 00 00 00   .....v...:.i(...
+0030  00 00 00 00 01 16 a9 86 bb 4d 7b db 63 55 90 11   .........M{.cU..
+0040  97 80 c3 3f c0 7f 4b 64 23 00 00 00 02 57 68 28   ...?..Kd#....Wh(
+0050  48 01 00 00 00 00 24 bc a6 16 e2 b1 e6 43         H.....$......C
+
+No.     Time           Source                Destination           Protocol Length Info
+      4 1.007944888    10.0.2.15             10.0.2.15             TLSv1    136    Client Hello
+
+Frame 4: 136 bytes on wire (1088 bits), 136 bytes captured (1088 bits) on interface 2
+Linux cooked capture
+Internet Protocol Version 4, Src: 10.0.2.15 (10.0.2.15), Dst: 10.0.2.15 (10.0.2.15)
+User Datagram Protocol, Src Port: 49782 (49782), Dst Port: 1194 (1194)
+OpenVPN Protocol
+Secure Sockets Layer
+    TLSv1 Record Layer: Handshake Protocol: Client Hello
+        Content Type: Handshake (22)
+        Version: TLS 1.0 (0x0301)
+        Length: 45
+        Handshake Protocol: Client Hello
+
+0000  00 00 03 04 00 06 00 00 00 00 00 00 00 00 08 00   ................
+0010  45 00 00 78 00 00 40 00 40 11 22 58 0a 00 02 0f   E..x..@.@."X....
+0020  0a 00 02 0f c2 76 04 aa 00 64 18 93 20 00 00 00   .....v...d.. ...
+0030  00 00 00 00 01 75 b2 8c 56 3d f6 e8 9a e2 2c d7   .....u..V=....,.
+0040  bf d6 c5 0a 0e 99 b1 4b 59 00 00 00 03 57 68 28   .......KY....Wh(
+0050  49 00 00 00 00 01 16 03 01 00 2d 01 00 00 29 03   I.........-...).
+0060  01 e9 2e 3a 00 00 00 00 00 00 00 00 00 00 00 00   ...:............
+0070  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0080  00 00 00 02 00 05 01 00                           ........
+
+No.     Time           Source                Destination           Protocol Length Info
+      5 1.008413427    10.0.2.15             10.0.2.15             OpenVPN  198    MessageType: P_CONTROL_V1 (Message fragment 1) 
+
+Frame 5: 198 bytes on wire (1584 bits), 198 bytes captured (1584 bits) on interface 2
+Linux cooked capture
+Internet Protocol Version 4, Src: 10.0.2.15 (10.0.2.15), Dst: 10.0.2.15 (10.0.2.15)
+User Datagram Protocol, Src Port: 1194 (1194), Dst Port: 49782 (49782)
+OpenVPN Protocol
+
+0000  00 00 03 04 00 06 00 00 00 00 00 00 00 00 08 00   ................
+0010  45 00 00 b6 00 00 40 00 40 11 22 1a 0a 00 02 0f   E.....@.@.".....
+0020  0a 00 02 0f 04 aa c2 76 00 a2 18 d1 20 24 bc a6   .......v.... $..
+0030  16 e2 b1 e6 43 d0 a7 81 2a 3a ea d6 5f 5b ce 5c   ....C...*:.._[.\
+0040  f6 4b 9f 95 d3 03 32 df bc 00 00 00 02 57 68 28   .K....2......Wh(
+0050  48 01 00 00 00 01 00 00 00 00 00 00 00 01 00 00   H...............
+0060  00 01 16 03 01 00 2a 02 00 00 26 03 01 c0 7a 7e   ......*...&...z~
+0070  ac a5 1e 47 41 f0 05 13 1a 83 27 26 c9 53 59 2b   ...GA.....'&.SY+
+0080  8e 24 85 4e e1 bd 92 bc f4 e3 68 d1 98 00 00 05   .$.N......h.....
+0090  00 16 03 01 05 96 0b 00 05 92 00 05 8f 00 02 cd   ................
+00a0  30 82 02 c9 30 82 01 b1 a0 03 02 01 02 02 01 01   0...0...........
+00b0  30 0d 06 09 2a 86 48 86 f7 0d 01 01 0b 05 00 30   0...*.H........0
+00c0  15 31 13 30 11 06                                 .1.0..
+
+No.     Time           Source                Destination           Protocol Length Info
+      6 1.008439580    10.0.2.15             10.0.2.15             OpenVPN  186    MessageType: P_CONTROL_V1 (Message fragment 2) 
+
+Frame 6: 186 bytes on wire (1488 bits), 186 bytes captured (1488 bits) on interface 2
+Linux cooked capture
+Internet Protocol Version 4, Src: 10.0.2.15 (10.0.2.15), Dst: 10.0.2.15 (10.0.2.15)
+User Datagram Protocol, Src Port: 1194 (1194), Dst Port: 49782 (49782)
+OpenVPN Protocol
+
+0000  00 00 03 04 00 06 00 00 00 00 00 00 00 00 08 00   ................
+0010  45 00 00 aa 00 00 40 00 40 11 22 26 0a 00 02 0f   E.....@.@."&....
+0020  0a 00 02 0f 04 aa c2 76 00 96 18 c5 20 24 bc a6   .......v.... $..
+0030  16 e2 b1 e6 43 ff ff a9 5f 75 2e a7 60 cc 1f 2f   ....C..._u..`../
+0040  b2 02 8b 7f fb d8 5c b2 6b 00 00 00 03 57 68 28   ......\.k....Wh(
+0050  48 00 00 00 00 02 03 55 04 03 0c 0a 4f 70 65 6e   H......U....Open
+0060  56 50 4e 20 43 41 30 1e 17 0d 31 36 30 36 30 33   VPN CA0...160603
+0070  30 36 30 35 35 39 5a 17 0d 32 36 30 36 30 38 30   060559Z..2606080
+0080  36 30 35 35 39 5a 30 19 31 17 30 15 06 03 55 04   60559Z0.1.0...U.
+0090  03 0c 0e 4f 70 65 6e 56 50 4e 20 53 65 72 76 65   ...OpenVPN Serve
+00a0  72 30 82 01 22 30 0d 06 09 2a 86 48 86 f7 0d 01   r0.."0...*.H....
+00b0  01 01 05 00 03 82 01 0f 00 30                     .........0
+
+No.     Time           Source                Destination           Protocol Length Info
+      7 1.008456833    10.0.2.15             10.0.2.15             OpenVPN  186    MessageType: P_CONTROL_V1 (Message fragment 3) 
+
+Frame 7: 186 bytes on wire (1488 bits), 186 bytes captured (1488 bits) on interface 2
+Linux cooked capture
+Internet Protocol Version 4, Src: 10.0.2.15 (10.0.2.15), Dst: 10.0.2.15 (10.0.2.15)
+User Datagram Protocol, Src Port: 1194 (1194), Dst Port: 49782 (49782)
+OpenVPN Protocol
+
+0000  00 00 03 04 00 06 00 00 00 00 00 00 00 00 08 00   ................
+0010  45 00 00 aa 00 00 40 00 40 11 22 26 0a 00 02 0f   E.....@.@."&....
+0020  0a 00 02 0f 04 aa c2 76 00 96 18 c5 20 24 bc a6   .......v.... $..
+0030  16 e2 b1 e6 43 55 33 7f 6e 7e c3 c7 a2 5f b4 29   ....CU3.n~..._.)
+0040  2f ca 1c 24 db eb e1 64 c9 00 00 00 04 57 68 28   /..$...d.....Wh(
+0050  48 00 00 00 00 03 82 01 0a 02 82 01 01 00 99 a4   H...............
+0060  84 01 4a d0 4d 07 ba 47 12 94 a9 31 3c db 81 36   ..J.M..G...1<..6
+0070  43 f7 7d 48 1d cf 63 b5 38 59 be 63 7a b9 a3 71   C.}H..c.8Y.cz..q
+0080  89 25 7f 8e b7 cc 00 9f 0c aa 62 d6 f0 bc 65 17   .%........b...e.
+0090  86 1e c3 44 4b 99 f1 bb 2d c4 77 6d c0 59 a1 4d   ...DK...-.wm.Y.M
+00a0  fb 5f 49 2d bf 55 c2 0a d4 bf e4 50 56 b3 b9 45   ._I-.U.....PV..E
+00b0  08 ed a0 3f 4f ce 72 49 cc b6                     ...?O.rI..
+
+No.     Time           Source                Destination           Protocol Length Info
+      8 1.008472284    10.0.2.15             10.0.2.15             OpenVPN  186    MessageType: P_CONTROL_V1 (Message fragment 4) 
+
+Frame 8: 186 bytes on wire (1488 bits), 186 bytes captured (1488 bits) on interface 2
+Linux cooked capture
+Internet Protocol Version 4, Src: 10.0.2.15 (10.0.2.15), Dst: 10.0.2.15 (10.0.2.15)
+User Datagram Protocol, Src Port: 1194 (1194), Dst Port: 49782 (49782)
+OpenVPN Protocol
+
+0000  00 00 03 04 00 06 00 00 00 00 00 00 00 00 08 00   ................
+0010  45 00 00 aa 00 00 40 00 40 11 22 26 0a 00 02 0f   E.....@.@."&....
+0020  0a 00 02 0f 04 aa c2 76 00 96 18 c5 20 24 bc a6   .......v.... $..
+0030  16 e2 b1 e6 43 3d 3a e9 6c 52 db cf a1 dd 65 38   ....C=:.lR....e8
+0040  1c 7d 0e f7 8f 6f 49 68 15 00 00 00 05 57 68 28   .}...oIh.....Wh(
+0050  48 00 00 00 00 04 8c fc 9c 73 43 1b d3 42 f5 26   H........sC..B.&
+0060  ac d2 f0 57 37 b3 fa 4d 5f da 82 d5 d8 0b 99 5e   ...W7..M_......^
+0070  1d c6 4b e2 28 6e 31 15 94 6c bc db 87 ba c7 76   ..K.(n1..l.....v
+0080  c0 e1 d0 af 91 3f 3c 39 e3 e9 9d d3 e4 35 82 c0   .....?<9.....5..
+0090  da 0f 8c 4d b6 c8 84 b1 15 cc 61 25 10 c9 39 34   ...M......a%..94
+00a0  70 df 46 7c 79 cc cb 16 e1 4e b1 50 f6 97 b0 9b   p.F|y....N.P....
+00b0  b8 61 30 11 6e a9 10 58 dc b8                     .a0.n..X..
+
+No.     Time           Source                Destination           Protocol Length Info
+      9 1.008973044    10.0.2.15             10.0.2.15             OpenVPN  94     MessageType: P_ACK_V1
+
+Frame 9: 94 bytes on wire (752 bits), 94 bytes captured (752 bits) on interface 2
+Linux cooked capture
+Internet Protocol Version 4, Src: 10.0.2.15 (10.0.2.15), Dst: 10.0.2.15 (10.0.2.15)
+User Datagram Protocol, Src Port: 49782 (49782), Dst Port: 1194 (1194)
+OpenVPN Protocol
+
+0000  00 00 03 04 00 06 00 00 00 00 00 00 00 00 08 00   ................
+0010  45 00 00 4e 00 00 40 00 40 11 22 82 0a 00 02 0f   E..N..@.@.".....
+0020  0a 00 02 0f c2 76 04 aa 00 3a 18 69 28 00 00 00   .....v...:.i(...
+0030  00 00 00 00 01 c2 10 21 22 27 10 fd 38 81 02 c3   .......!"'..8...
+0040  78 39 9a ba c4 1e 90 77 62 00 00 00 04 57 68 28   x9.....wb....Wh(
+0050  49 01 00 00 00 01 24 bc a6 16 e2 b1 e6 43         I.....$......C
+
+No.     Time           Source                Destination           Protocol Length Info
+     10 1.009040987    10.0.2.15             10.0.2.15             OpenVPN  94     MessageType: P_ACK_V1
+
+Frame 10: 94 bytes on wire (752 bits), 94 bytes captured (752 bits) on interface 2
+Linux cooked capture
+Internet Protocol Version 4, Src: 10.0.2.15 (10.0.2.15), Dst: 10.0.2.15 (10.0.2.15)
+User Datagram Protocol, Src Port: 49782 (49782), Dst Port: 1194 (1194)
+OpenVPN Protocol
+
+0000  00 00 03 04 00 06 00 00 00 00 00 00 00 00 08 00   ................
+0010  45 00 00 4e 00 00 40 00 40 11 22 82 0a 00 02 0f   E..N..@.@.".....
+0020  0a 00 02 0f c2 76 04 aa 00 3a 18 69 28 00 00 00   .....v...:.i(...
+0030  00 00 00 00 01 d0 37 4a 8e 8d 81 6b 01 ca 5b df   ......7J...k..[.
+0040  44 c7 2f fe b9 aa 0c fa 3e 00 00 00 05 57 68 28   D./.....>....Wh(
+0050  49 01 00 00 00 02 24 bc a6 16 e2 b1 e6 43         I.....$......C
+
+No.     Time           Source                Destination           Protocol Length Info
+     11 1.009074253    10.0.2.15             10.0.2.15             OpenVPN  94     MessageType: P_ACK_V1
+
+Frame 11: 94 bytes on wire (752 bits), 94 bytes captured (752 bits) on interface 2
+Linux cooked capture
+Internet Protocol Version 4, Src: 10.0.2.15 (10.0.2.15), Dst: 10.0.2.15 (10.0.2.15)
+User Datagram Protocol, Src Port: 49782 (49782), Dst Port: 1194 (1194)
+OpenVPN Protocol
+
+0000  00 00 03 04 00 06 00 00 00 00 00 00 00 00 08 00   ................
+0010  45 00 00 4e 00 00 40 00 40 11 22 82 0a 00 02 0f   E..N..@.@.".....
+0020  0a 00 02 0f c2 76 04 aa 00 3a 18 69 28 00 00 00   .....v...:.i(...
+0030  00 00 00 00 01 5d 6a ed 6c cd 4a 2f 2c 63 4d 98   .....]j.l.J/,cM.
+0040  d8 1b 5e 5d 82 f5 92 ff f3 00 00 00 06 57 68 28   ..^].........Wh(
+0050  49 01 00 00 00 03 24 bc a6 16 e2 b1 e6 43         I.....$......C
+
+No.     Time           Source                Destination           Protocol Length Info
+     12 1.009125010    10.0.2.15             10.0.2.15             OpenVPN  94     MessageType: P_ACK_V1
+
+Frame 12: 94 bytes on wire (752 bits), 94 bytes captured (752 bits) on interface 2
+Linux cooked capture
+Internet Protocol Version 4, Src: 10.0.2.15 (10.0.2.15), Dst: 10.0.2.15 (10.0.2.15)
+User Datagram Protocol, Src Port: 49782 (49782), Dst Port: 1194 (1194)
+OpenVPN Protocol
+
+0000  00 00 03 04 00 06 00 00 00 00 00 00 00 00 08 00   ................
+0010  45 00 00 4e 00 00 40 00 40 11 22 82 0a 00 02 0f   E..N..@.@.".....
+0020  0a 00 02 0f c2 76 04 aa 00 3a 18 69 28 00 00 00   .....v...:.i(...
+0030  00 00 00 00 01 86 20 cb 62 72 b2 8c 72 09 2b 29   ...... .br..r.+)
+0040  95 4b da d5 a6 37 d3 6c 6f 00 00 00 07 57 68 28   .K...7.lo....Wh(
+0050  49 01 00 00 00 04 24 bc a6 16 e2 b1 e6 43         I.....$......C
+
+No.     Time           Source                Destination           Protocol Length Info
+     13 1.009985168    10.0.2.15             10.0.2.15             OpenVPN  186    MessageType: P_CONTROL_V1 (Message fragment 5) 
+
+Frame 13: 186 bytes on wire (1488 bits), 186 bytes captured (1488 bits) on interface 2
+Linux cooked capture
+Internet Protocol Version 4, Src: 10.0.2.15 (10.0.2.15), Dst: 10.0.2.15 (10.0.2.15)
+User Datagram Protocol, Src Port: 1194 (1194), Dst Port: 49782 (49782)
+OpenVPN Protocol
+
+0000  00 00 03 04 00 06 00 00 00 00 00 00 00 00 08 00   ................
+0010  45 00 00 aa 00 00 40 00 40 11 22 26 0a 00 02 0f   E.....@.@."&....
+0020  0a 00 02 0f 04 aa c2 76 00 96 18 c5 20 24 bc a6   .......v.... $..
+0030  16 e2 b1 e6 43 66 74 ad 53 28 02 7f 5f cb 43 2c   ....Cft.S(.._.C,
+0040  9c c6 55 d5 6f f7 57 87 a0 00 00 00 06 57 68 28   ..U.o.W......Wh(
+0050  48 00 00 00 00 05 10 34 5d ac 91 ca b7 71 c2 87   H......4]....q..
+0060  3d cd 62 7c c7 13 ef 2c 31 55 e7 16 7a 0e 7c 4c   =.b|...,1U..z.|L
+0070  35 5f 1f 33 07 72 ec 53 41 01 f3 1d c7 3f bf 2a   5_.3.r.SA....?.*
+0080  34 8c 7c 0b 13 4d 4a 69 c5 f1 9c 21 51 0c 88 32   4.|..MJi...!Q..2
+0090  a7 a7 da 27 76 09 02 03 01 00 01 a3 20 30 1e 30   ...'v....... 0.0
+00a0  09 06 03 55 1d 13 04 02 30 00 30 11 06 09 60 86   ...U....0.0...`.
+00b0  48 01 86 f8 42 01 01 04 04 03                     H...B.....
+
+No.     Time           Source                Destination           Protocol Length Info
+     14 1.010042068    10.0.2.15             10.0.2.15             OpenVPN  186    MessageType: P_CONTROL_V1 (Message fragment 6) 
+
+Frame 14: 186 bytes on wire (1488 bits), 186 bytes captured (1488 bits) on interface 2
+Linux cooked capture
+Internet Protocol Version 4, Src: 10.0.2.15 (10.0.2.15), Dst: 10.0.2.15 (10.0.2.15)
+User Datagram Protocol, Src Port: 1194 (1194), Dst Port: 49782 (49782)
+OpenVPN Protocol
+
+0000  00 00 03 04 00 06 00 00 00 00 00 00 00 00 08 00   ................
+0010  45 00 00 aa 00 00 40 00 40 11 22 26 0a 00 02 0f   E.....@.@."&....
+0020  0a 00 02 0f 04 aa c2 76 00 96 18 c5 20 24 bc a6   .......v.... $..
+0030  16 e2 b1 e6 43 1e eb 0a 02 f4 b8 1f 7d 95 b0 95   ....C.......}...
+0040  a0 20 53 8f 16 04 5d d7 cc 00 00 00 07 57 68 28   . S...]......Wh(
+0050  48 00 00 00 00 06 02 06 40 30 0d 06 09 2a 86 48   H.......@0...*.H
+0060  86 f7 0d 01 01 0b 05 00 03 82 01 01 00 20 ac 66   ............. .f
+0070  bf 60 ef ce ff a1 ee 30 fc 91 39 72 e5 6c 54 b2   .`.....0..9r.lT.
+0080  5d 68 22 a8 4d 7a 46 2f e1 70 a8 00 4a 9d 76 2a   ]h".MzF/.p..J.v*
+0090  27 7e f7 38 c7 c6 b8 22 89 8c c9 31 d3 3d c6 bd   '~.8..."...1.=..
+00a0  09 3d bc b0 15 17 e9 fa 7c 87 71 ec a9 f0 23 d0   .=......|.q...#.
+00b0  4e c9 a4 d6 7c 1d 79 80 2a 22                     N...|.y.*"
+
+No.     Time           Source                Destination           Protocol Length Info
+     15 1.010086641    10.0.2.15             10.0.2.15             OpenVPN  186    MessageType: P_CONTROL_V1 (Message fragment 7) 
+
+Frame 15: 186 bytes on wire (1488 bits), 186 bytes captured (1488 bits) on interface 2
+Linux cooked capture
+Internet Protocol Version 4, Src: 10.0.2.15 (10.0.2.15), Dst: 10.0.2.15 (10.0.2.15)
+User Datagram Protocol, Src Port: 1194 (1194), Dst Port: 49782 (49782)
+OpenVPN Protocol
+
+0000  00 00 03 04 00 06 00 00 00 00 00 00 00 00 08 00   ................
+0010  45 00 00 aa 00 00 40 00 40 11 22 26 0a 00 02 0f   E.....@.@."&....
+0020  0a 00 02 0f 04 aa c2 76 00 96 18 c5 20 24 bc a6   .......v.... $..
+0030  16 e2 b1 e6 43 b7 19 2b 16 3d a6 a4 47 a3 37 72   ....C..+.=..G.7r
+0040  e0 50 db 97 84 82 97 41 91 00 00 00 08 57 68 28   .P.....A.....Wh(
+0050  48 00 00 00 00 07 68 0f aa 24 cb 22 be 9c ad 5f   H.....h..$."..._
+0060  82 a7 b2 d0 8d c8 bf 68 ea bf 69 78 7a 8e 68 0b   .......h..ixz.h.
+0070  36 ea f7 a5 8e af a6 7d 46 09 a8 2e 48 47 81 41   6......}F...HG.A
+0080  87 b9 81 18 16 73 54 bb ba d1 ac 7d 7e c2 2a a9   .....sT....}~.*.
+0090  89 ef ce 42 35 09 5d 54 b3 27 bd 4b d7 da f7 a3   ...B5.]T.'.K....
+00a0  40 22 53 b2 92 09 b5 63 81 74 db c8 93 ad 25 d7   @"S....c.t....%.
+00b0  af d4 61 37 7c 8c c7 a9 e3 8e                     ..a7|.....
+
+No.     Time           Source                Destination           Protocol Length Info
+     16 1.010172112    10.0.2.15             10.0.2.15             OpenVPN  186    MessageType: P_CONTROL_V1 (Message fragment 8) 
+
+Frame 16: 186 bytes on wire (1488 bits), 186 bytes captured (1488 bits) on interface 2
+Linux cooked capture
+Internet Protocol Version 4, Src: 10.0.2.15 (10.0.2.15), Dst: 10.0.2.15 (10.0.2.15)
+User Datagram Protocol, Src Port: 1194 (1194), Dst Port: 49782 (49782)
+OpenVPN Protocol
+
+0000  00 00 03 04 00 06 00 00 00 00 00 00 00 00 08 00   ................
+0010  45 00 00 aa 00 00 40 00 40 11 22 26 0a 00 02 0f   E.....@.@."&....
+0020  0a 00 02 0f 04 aa c2 76 00 96 18 c5 20 24 bc a6   .......v.... $..
+0030  16 e2 b1 e6 43 f0 8b a8 52 f2 24 b3 a4 c8 08 50   ....C...R.$....P
+0040  88 64 34 3f ed 42 06 d5 4c 00 00 00 09 57 68 28   .d4?.B..L....Wh(
+0050  48 00 00 00 00 08 88 40 03 40 dc ad 17 49 79 d2   H......@.@...Iy.
+0060  fa 0e 0d c3 14 8e 44 cf 75 73 e9 f9 f9 a2 1c 3a   ......D.us.....:
+0070  f3 ab 3c 38 8a 29 2d 78 c3 08 22 53 0a b6 24 93   ..<8.)-x.."S..$.
+0080  f9 4e dc 37 1d 36 71 9b 67 49 49 9c 7d 5b f0 ae   .N.7.6q.gII.}[..
+0090  bf b2 f0 b6 b6 28 61 35 a4 97 9c 6e 61 3c b1 0a   .....(a5...na<..
+00a0  62 b9 1d 0a 16 00 02 bc 30 82 02 b8 30 82 01 a0   b.......0...0...
+00b0  a0 03 02 01 02 02 04 57 5a 58                     .......WZX
+
+No.     Time           Source                Destination           Protocol Length Info
+     17 1.013526644    10.0.2.15             10.0.2.15             OpenVPN  94     MessageType: P_ACK_V1
+
+Frame 17: 94 bytes on wire (752 bits), 94 bytes captured (752 bits) on interface 2
+Linux cooked capture
+Internet Protocol Version 4, Src: 10.0.2.15 (10.0.2.15), Dst: 10.0.2.15 (10.0.2.15)
+User Datagram Protocol, Src Port: 49782 (49782), Dst Port: 1194 (1194)
+OpenVPN Protocol
+
+0000  00 00 03 04 00 06 00 00 00 00 00 00 00 00 08 00   ................
+0010  45 00 00 4e 00 00 40 00 40 11 22 82 0a 00 02 0f   E..N..@.@.".....
+0020  0a 00 02 0f c2 76 04 aa 00 3a 18 69 28 00 00 00   .....v...:.i(...
+0030  00 00 00 00 01 e6 35 6f 00 45 da 80 bf e4 0d 03   ......5o.E......
+0040  1c 94 37 1f d3 7f c6 4c 5b 00 00 00 08 57 68 28   ..7....L[....Wh(
+0050  49 01 00 00 00 05 24 bc a6 16 e2 b1 e6 43         I.....$......C
+
+No.     Time           Source                Destination           Protocol Length Info
+     18 1.013598155    10.0.2.15             10.0.2.15             OpenVPN  94     MessageType: P_ACK_V1
+
+Frame 18: 94 bytes on wire (752 bits), 94 bytes captured (752 bits) on interface 2
+Linux cooked capture
+Internet Protocol Version 4, Src: 10.0.2.15 (10.0.2.15), Dst: 10.0.2.15 (10.0.2.15)
+User Datagram Protocol, Src Port: 49782 (49782), Dst Port: 1194 (1194)
+OpenVPN Protocol
+
+0000  00 00 03 04 00 06 00 00 00 00 00 00 00 00 08 00   ................
+0010  45 00 00 4e 00 00 40 00 40 11 22 82 0a 00 02 0f   E..N..@.@.".....
+0020  0a 00 02 0f c2 76 04 aa 00 3a 18 69 28 00 00 00   .....v...:.i(...
+0030  00 00 00 00 01 07 0c 9d 00 70 6f c4 ca fc d2 1d   .........po.....
+0040  0d 1c 72 3c 5f 61 05 d5 c1 00 00 00 09 57 68 28   ..r<_a.......Wh(
+0050  49 01 00 00 00 06 24 bc a6 16 e2 b1 e6 43         I.....$......C
+
+No.     Time           Source                Destination           Protocol Length Info
+     19 1.013651264    10.0.2.15             10.0.2.15             OpenVPN  94     MessageType: P_ACK_V1
+
+Frame 19: 94 bytes on wire (752 bits), 94 bytes captured (752 bits) on interface 2
+Linux cooked capture
+Internet Protocol Version 4, Src: 10.0.2.15 (10.0.2.15), Dst: 10.0.2.15 (10.0.2.15)
+User Datagram Protocol, Src Port: 49782 (49782), Dst Port: 1194 (1194)
+OpenVPN Protocol
+
+0000  00 00 03 04 00 06 00 00 00 00 00 00 00 00 08 00   ................
+0010  45 00 00 4e 00 00 40 00 40 11 22 82 0a 00 02 0f   E..N..@.@.".....
+0020  0a 00 02 0f c2 76 04 aa 00 3a 18 69 28 00 00 00   .....v...:.i(...
+0030  00 00 00 00 01 e2 51 16 da 68 f0 6a 29 8d 25 0a   ......Q..h.j).%.
+0040  84 af 00 ac c1 b6 a4 62 f1 00 00 00 0a 57 68 28   .......b.....Wh(
+0050  49 01 00 00 00 07 24 bc a6 16 e2 b1 e6 43         I.....$......C
+
+No.     Time           Source                Destination           Protocol Length Info
+     20 1.013703808    10.0.2.15             10.0.2.15             OpenVPN  94     MessageType: P_ACK_V1
+
+Frame 20: 94 bytes on wire (752 bits), 94 bytes captured (752 bits) on interface 2
+Linux cooked capture
+Internet Protocol Version 4, Src: 10.0.2.15 (10.0.2.15), Dst: 10.0.2.15 (10.0.2.15)
+User Datagram Protocol, Src Port: 49782 (49782), Dst Port: 1194 (1194)
+OpenVPN Protocol
+
+0000  00 00 03 04 00 06 00 00 00 00 00 00 00 00 08 00   ................
+0010  45 00 00 4e 00 00 40 00 40 11 22 82 0a 00 02 0f   E..N..@.@.".....
+0020  0a 00 02 0f c2 76 04 aa 00 3a 18 69 28 00 00 00   .....v...:.i(...
+0030  00 00 00 00 01 0f 06 be 39 ba 9e 88 fd d4 40 7d   ........9.....@}
+0040  8f c4 a5 7b e5 f2 12 3a d5 00 00 00 0b 57 68 28   ...{...:.....Wh(
+0050  49 01 00 00 00 08 24 bc a6 16 e2 b1 e6 43         I.....$......C
+
+No.     Time           Source                Destination           Protocol Length Info
+     21 1.014218721    10.0.2.15             10.0.2.15             OpenVPN  186    MessageType: P_CONTROL_V1 (Message fragment 9) 
+
+Frame 21: 186 bytes on wire (1488 bits), 186 bytes captured (1488 bits) on interface 2
+Linux cooked capture
+Internet Protocol Version 4, Src: 10.0.2.15 (10.0.2.15), Dst: 10.0.2.15 (10.0.2.15)
+User Datagram Protocol, Src Port: 1194 (1194), Dst Port: 49782 (49782)
+OpenVPN Protocol
+
+0000  00 00 03 04 00 06 00 00 00 00 00 00 00 00 08 00   ................
+0010  45 00 00 aa 00 00 40 00 40 11 22 26 0a 00 02 0f   E.....@.@."&....
+0020  0a 00 02 0f 04 aa c2 76 00 96 18 c5 20 24 bc a6   .......v.... $..
+0030  16 e2 b1 e6 43 19 a3 01 bc 0a 31 e6 bf 55 f1 05   ....C.....1..U..
+0040  6d 16 62 7b d7 d1 0b 73 46 00 00 00 0a 57 68 28   m.b{...sF....Wh(
+0050  48 00 00 00 00 09 c6 30 0d 06 09 2a 86 48 86 f7   H......0...*.H..
+0060  0d 01 01 0b 05 00 30 15 31 13 30 11 06 03 55 04   ......0.1.0...U.
+0070  03 0c 0a 4f 70 65 6e 56 50 4e 20 43 41 30 1e 17   ...OpenVPN CA0..
+0080  0d 31 36 30 36 30 33 30 36 30 35 35 38 5a 17 0d   .160603060558Z..
+0090  32 36 30 36 30 38 30 36 30 35 35 38 5a 30 15 31   260608060558Z0.1
+00a0  13 30 11 06 03 55 04 03 0c 0a 4f 70 65 6e 56 50   .0...U....OpenVP
+00b0  4e 20 43 41 30 82 01 22 30 0d                     N CA0.."0.
+
+No.     Time           Source                Destination           Protocol Length Info
+     22 1.014275057    10.0.2.15             10.0.2.15             OpenVPN  186    MessageType: P_CONTROL_V1 (Message fragment 10) 
+
+Frame 22: 186 bytes on wire (1488 bits), 186 bytes captured (1488 bits) on interface 2
+Linux cooked capture
+Internet Protocol Version 4, Src: 10.0.2.15 (10.0.2.15), Dst: 10.0.2.15 (10.0.2.15)
+User Datagram Protocol, Src Port: 1194 (1194), Dst Port: 49782 (49782)
+OpenVPN Protocol
+
+0000  00 00 03 04 00 06 00 00 00 00 00 00 00 00 08 00   ................
+0010  45 00 00 aa 00 00 40 00 40 11 22 26 0a 00 02 0f   E.....@.@."&....
+0020  0a 00 02 0f 04 aa c2 76 00 96 18 c5 20 24 bc a6   .......v.... $..
+0030  16 e2 b1 e6 43 a6 ac c6 8a a5 bc a8 e7 c7 95 f0   ....C...........
+0040  ce bb 5e 22 f4 c6 ae 40 cc 00 00 00 0b 57 68 28   ..^"...@.....Wh(
+0050  48 00 00 00 00 0a 06 09 2a 86 48 86 f7 0d 01 01   H.......*.H.....
+0060  01 05 00 03 82 01 0f 00 30 82 01 0a 02 82 01 01   ........0.......
+0070  00 b4 99 5a b2 ee 29 f6 e3 a6 f1 c9 dc dc 00 3c   ...Z..)........<
+0080  6c f2 25 37 e5 8f 1a 78 92 5f 57 88 9a ea cb 5a   l.%7...x._W....Z
+0090  56 29 92 ae 0f 7b 02 53 46 b6 26 bb 69 6d b2 e5   V)...{.SF.&.im..
+00a0  1a 83 5b cd ef 26 dc 86 6e fa 5d 42 1b a3 c3 19   ..[..&..n.]B....
+00b0  09 67 1f d8 b9 85 0b 90 c5 7a                     .g.......z
+
+No.     Time           Source                Destination           Protocol Length Info
+     23 1.014320942    10.0.2.15             10.0.2.15             OpenVPN  186    MessageType: P_CONTROL_V1 (Message fragment 11) 
+
+Frame 23: 186 bytes on wire (1488 bits), 186 bytes captured (1488 bits) on interface 2
+Linux cooked capture
+Internet Protocol Version 4, Src: 10.0.2.15 (10.0.2.15), Dst: 10.0.2.15 (10.0.2.15)
+User Datagram Protocol, Src Port: 1194 (1194), Dst Port: 49782 (49782)
+OpenVPN Protocol
+
+0000  00 00 03 04 00 06 00 00 00 00 00 00 00 00 08 00   ................
+0010  45 00 00 aa 00 00 40 00 40 11 22 26 0a 00 02 0f   E.....@.@."&....
+0020  0a 00 02 0f 04 aa c2 76 00 96 18 c5 20 24 bc a6   .......v.... $..
+0030  16 e2 b1 e6 43 3c d9 cf ee d9 d8 e8 41 0f 22 dc   ....C<......A.".
+0040  1a 1d 0a aa c1 90 d4 e5 18 00 00 00 0c 57 68 28   .............Wh(
+0050  48 00 00 00 00 0b 47 b6 ae 42 4e 97 6e cf 2f 61   H.....G..BN.n./a
+0060  40 3b fb 07 8c 63 e9 64 fc 4a ea 31 e4 bf 0b 91   @;...c.d.J.1....
+0070  8f 42 32 b8 cd f9 c4 e3 00 5b 66 87 82 b3 da ef   .B2......[f.....
+0080  e4 75 a8 ce 30 79 de 99 a6 bd ea 87 b3 1f c7 31   .u..0y.........1
+0090  00 6e 70 ff b0 13 5b c3 8e eb 87 99 83 3a 7f bb   .np...[......:..
+00a0  0a 9a c0 95 bf 15 36 fc ff b8 17 be cb ac e2 3f   ......6........?
+00b0  60 9c 02 01 e3 35 4c 8f 7c f4                     `....5L.|.
+
+No.     Time           Source                Destination           Protocol Length Info
+     24 1.015176006    10.0.2.15             10.0.2.15             OpenVPN  186    MessageType: P_CONTROL_V1 (Message fragment 12) 
+
+Frame 24: 186 bytes on wire (1488 bits), 186 bytes captured (1488 bits) on interface 2
+Linux cooked capture
+Internet Protocol Version 4, Src: 10.0.2.15 (10.0.2.15), Dst: 10.0.2.15 (10.0.2.15)
+User Datagram Protocol, Src Port: 1194 (1194), Dst Port: 49782 (49782)
+OpenVPN Protocol
+
+0000  00 00 03 04 00 06 00 00 00 00 00 00 00 00 08 00   ................
+0010  45 00 00 aa 00 00 40 00 40 11 22 26 0a 00 02 0f   E.....@.@."&....
+0020  0a 00 02 0f 04 aa c2 76 00 96 18 c5 20 24 bc a6   .......v.... $..
+0030  16 e2 b1 e6 43 20 25 72 da 65 6d e3 3f 77 9d a1   ....C %r.em.?w..
+0040  ce 48 e2 10 ba 41 f8 1e e2 00 00 00 0d 57 68 28   .H...A.......Wh(
+0050  48 00 00 00 00 0c a5 97 ab 30 c4 92 9a 62 f4 60   H........0...b.`
+0060  12 56 ef cc ad 81 f6 4f bc c8 4a e2 39 22 e8 58   .V.....O..J.9".X
+0070  6b f2 28 87 45 e1 de 76 ee 29 fa 21 a2 f7 c2 6f   k.(.E..v.).!...o
+0080  63 b7 81 00 6b 7f 92 91 26 10 90 be f5 05 0b b1   c...k...&.......
+0090  cb 6e 6e fb 71 1c 10 63 3a 52 0b a7 02 bc 25 01   .nn.q..c:R....%.
+00a0  d8 71 cd 7a 15 a2 c6 0e 37 02 03 01 00 01 a3 10   .q.z....7.......
+00b0  30 0e 30 0c 06 03 55 1d 13 04                     0.0...U...
+
+No.     Time           Source                Destination           Protocol Length Info
+     25 1.015254403    10.0.2.15             10.0.2.15             OpenVPN  94     MessageType: P_ACK_V1
+
+Frame 25: 94 bytes on wire (752 bits), 94 bytes captured (752 bits) on interface 2
+Linux cooked capture
+Internet Protocol Version 4, Src: 10.0.2.15 (10.0.2.15), Dst: 10.0.2.15 (10.0.2.15)
+User Datagram Protocol, Src Port: 49782 (49782), Dst Port: 1194 (1194)
+OpenVPN Protocol
+
+0000  00 00 03 04 00 06 00 00 00 00 00 00 00 00 08 00   ................
+0010  45 00 00 4e 00 00 40 00 40 11 22 82 0a 00 02 0f   E..N..@.@.".....
+0020  0a 00 02 0f c2 76 04 aa 00 3a 18 69 28 00 00 00   .....v...:.i(...
+0030  00 00 00 00 01 bc 2a 94 4d 14 1b 00 73 d8 f3 91   ......*.M...s...
+0040  b8 85 e5 23 3a d5 3c b7 1c 00 00 00 0c 57 68 28   ...#:.<......Wh(
+0050  49 01 00 00 00 09 24 bc a6 16 e2 b1 e6 43         I.....$......C
+
+No.     Time           Source                Destination           Protocol Length Info
+     26 1.015290199    10.0.2.15             10.0.2.15             OpenVPN  94     MessageType: P_ACK_V1
+
+Frame 26: 94 bytes on wire (752 bits), 94 bytes captured (752 bits) on interface 2
+Linux cooked capture
+Internet Protocol Version 4, Src: 10.0.2.15 (10.0.2.15), Dst: 10.0.2.15 (10.0.2.15)
+User Datagram Protocol, Src Port: 49782 (49782), Dst Port: 1194 (1194)
+OpenVPN Protocol
+
+0000  00 00 03 04 00 06 00 00 00 00 00 00 00 00 08 00   ................
+0010  45 00 00 4e 00 00 40 00 40 11 22 82 0a 00 02 0f   E..N..@.@.".....
+0020  0a 00 02 0f c2 76 04 aa 00 3a 18 69 28 00 00 00   .....v...:.i(...
+0030  00 00 00 00 01 23 41 58 e7 28 ec 52 f0 b8 68 af   .....#AX.(.R..h.
+0040  0b b3 f1 ce c2 6e 52 2d aa 00 00 00 0d 57 68 28   .....nR-.....Wh(
+0050  49 01 00 00 00 0a 24 bc a6 16 e2 b1 e6 43         I.....$......C
+
+No.     Time           Source                Destination           Protocol Length Info
+     27 1.015308267    10.0.2.15             10.0.2.15             OpenVPN  94     MessageType: P_ACK_V1
+
+Frame 27: 94 bytes on wire (752 bits), 94 bytes captured (752 bits) on interface 2
+Linux cooked capture
+Internet Protocol Version 4, Src: 10.0.2.15 (10.0.2.15), Dst: 10.0.2.15 (10.0.2.15)
+User Datagram Protocol, Src Port: 49782 (49782), Dst Port: 1194 (1194)
+OpenVPN Protocol
+
+0000  00 00 03 04 00 06 00 00 00 00 00 00 00 00 08 00   ................
+0010  45 00 00 4e 00 00 40 00 40 11 22 82 0a 00 02 0f   E..N..@.@.".....
+0020  0a 00 02 0f c2 76 04 aa 00 3a 18 69 28 00 00 00   .....v...:.i(...
+0030  00 00 00 00 01 e4 16 54 64 4c ba 17 3c 65 22 52   .......TdL..<e"R
+0040  d2 c8 ed 49 05 61 51 99 dc 00 00 00 0e 57 68 28   ...I.aQ......Wh(
+0050  49 01 00 00 00 0b 24 bc a6 16 e2 b1 e6 43         I.....$......C
+
+No.     Time           Source                Destination           Protocol Length Info
+     28 1.015308498    10.0.2.15             10.0.2.15             OpenVPN  94     MessageType: P_ACK_V1
+
+Frame 28: 94 bytes on wire (752 bits), 94 bytes captured (752 bits) on interface 2
+Linux cooked capture
+Internet Protocol Version 4, Src: 10.0.2.15 (10.0.2.15), Dst: 10.0.2.15 (10.0.2.15)
+User Datagram Protocol, Src Port: 49782 (49782), Dst Port: 1194 (1194)
+OpenVPN Protocol
+
+0000  00 00 03 04 00 06 00 00 00 00 00 00 00 00 08 00   ................
+0010  45 00 00 4e 00 00 40 00 40 11 22 82 0a 00 02 0f   E..N..@.@.".....
+0020  0a 00 02 0f c2 76 04 aa 00 3a 18 69 28 00 00 00   .....v...:.i(...
+0030  00 00 00 00 01 c5 60 24 fd 75 30 61 a8 95 f4 a0   ......`$.u0a....
+0040  bb b3 b1 f2 a5 d5 5f 65 11 00 00 00 0f 57 68 28   ......_e.....Wh(
+0050  49 01 00 00 00 0c 24 bc a6 16 e2 b1 e6 43         I.....$......C
+
+No.     Time           Source                Destination           Protocol Length Info
+     29 1.015373585    10.0.2.15             10.0.2.15             OpenVPN  186    MessageType: P_CONTROL_V1 (Message fragment 13) 
+
+Frame 29: 186 bytes on wire (1488 bits), 186 bytes captured (1488 bits) on interface 2
+Linux cooked capture
+Internet Protocol Version 4, Src: 10.0.2.15 (10.0.2.15), Dst: 10.0.2.15 (10.0.2.15)
+User Datagram Protocol, Src Port: 1194 (1194), Dst Port: 49782 (49782)
+OpenVPN Protocol
+
+0000  00 00 03 04 00 06 00 00 00 00 00 00 00 00 08 00   ................
+0010  45 00 00 aa 00 00 40 00 40 11 22 26 0a 00 02 0f   E.....@.@."&....
+0020  0a 00 02 0f 04 aa c2 76 00 96 18 c5 20 24 bc a6   .......v.... $..
+0030  16 e2 b1 e6 43 b5 81 d4 3d d1 06 12 eb 9e ad 02   ....C...=.......
+0040  39 45 5a 00 85 fa 41 49 d3 00 00 00 0e 57 68 28   9EZ...AI.....Wh(
+0050  48 00 00 00 00 0d 05 30 03 01 01 ff 30 0d 06 09   H......0....0...
+0060  2a 86 48 86 f7 0d 01 01 0b 05 00 03 82 01 01 00   *.H.............
+0070  4c 02 10 3d 8d 95 dd 4b 1b 34 fa bf 80 93 c2 a4   L..=...K.4......
+0080  64 5f 0b a5 62 eb 8c cb 80 0c 86 1f 17 91 ad ac   d_..b...........
+0090  e2 9b 3e 0c 12 85 1d 77 29 af 4c bf 36 74 1b dc   ..>....w).L.6t..
+00a0  af e4 af 71 62 b1 e6 93 29 2f b6 76 b2 7a e9 77   ...qb...)/.v.z.w
+00b0  e5 29 5f 72 45 2e 02 9a 03 3f                     .)_rE....?
+
+No.     Time           Source                Destination           Protocol Length Info
+     30 1.015442402    10.0.2.15             10.0.2.15             OpenVPN  186    MessageType: P_CONTROL_V1 (Message fragment 14) 
+
+Frame 30: 186 bytes on wire (1488 bits), 186 bytes captured (1488 bits) on interface 2
+Linux cooked capture
+Internet Protocol Version 4, Src: 10.0.2.15 (10.0.2.15), Dst: 10.0.2.15 (10.0.2.15)
+User Datagram Protocol, Src Port: 1194 (1194), Dst Port: 49782 (49782)
+OpenVPN Protocol
+
+0000  00 00 03 04 00 06 00 00 00 00 00 00 00 00 08 00   ................
+0010  45 00 00 aa 00 00 40 00 40 11 22 26 0a 00 02 0f   E.....@.@."&....
+0020  0a 00 02 0f 04 aa c2 76 00 96 18 c5 20 24 bc a6   .......v.... $..
+0030  16 e2 b1 e6 43 9a 7a 56 cd 93 72 46 74 9f aa 39   ....C.zV..rFt..9
+0040  44 4b ed db a3 c9 91 6e 84 00 00 00 0f 57 68 28   DK.....n.....Wh(
+0050  48 00 00 00 00 0e b1 5f e4 c7 fc b7 b5 2b 98 01   H......_.....+..
+0060  cb 15 8f dd 8c 44 16 4f d3 ac 0c e2 6a 32 4e 39   .....D.O....j2N9
+0070  99 94 df be 7a 5e d9 10 96 71 99 00 93 78 25 36   ....z^...q...x%6
+0080  72 51 21 ad a6 e3 73 a6 c9 c7 35 5b 98 e1 62 fa   rQ!...s...5[..b.
+0090  0c 40 85 65 7a 12 e0 b8 9e 05 08 8d 4c 8c 6c 2b   .@.ez.......L.l+
+00a0  8c 62 9b 49 5f 93 bb 7a 67 f2 2f 2b bf c3 b7 14   .b.I_..zg./+....
+00b0  cd 53 f4 80 9f da 70 bf d4 d8                     .S....p...
+
+No.     Time           Source                Destination           Protocol Length Info
+     31 1.015507121    10.0.2.15             10.0.2.15             OpenVPN  186    MessageType: P_CONTROL_V1 (Message fragment 15) 
+
+Frame 31: 186 bytes on wire (1488 bits), 186 bytes captured (1488 bits) on interface 2
+Linux cooked capture
+Internet Protocol Version 4, Src: 10.0.2.15 (10.0.2.15), Dst: 10.0.2.15 (10.0.2.15)
+User Datagram Protocol, Src Port: 1194 (1194), Dst Port: 49782 (49782)
+OpenVPN Protocol
+
+0000  00 00 03 04 00 06 00 00 00 00 00 00 00 00 08 00   ................
+0010  45 00 00 aa 00 00 40 00 40 11 22 26 0a 00 02 0f   E.....@.@."&....
+0020  0a 00 02 0f 04 aa c2 76 00 96 18 c5 20 24 bc a6   .......v.... $..
+0030  16 e2 b1 e6 43 be a6 ff 35 d9 41 d8 99 49 0a ad   ....C...5.A..I..
+0040  c0 e8 27 04 0f b4 e2 c2 e0 00 00 00 10 57 68 28   ..'..........Wh(
+0050  48 00 00 00 00 0f 07 c0 c6 04 0d ce b8 0d c7 db   H...............
+0060  f3 8f e1 4b 5c 05 88 96 e1 97 f9 89 20 9c db 02   ...K\....... ...
+0070  e3 00 e4 1c 25 eb 5a b9 70 60 4d b8 52 ce e3 13   ....%.Z.p`M.R...
+0080  d6 36 ba 54 63 6e 7d 51 08 52 5e b2 b8 95 75 2c   .6.Tcn}Q.R^...u,
+0090  d6 0c 9a 08 84 9c c5 4c c2 15 02 d3 41 0c 9d 46   .......L....A..F
+00a0  68 42 a6 55 d3 f5 6b 5f 16 03 01 00 27 0d 00 00   hB.U..k_....'...
+00b0  1f 03 01 02 40 00 19 00 17 30                     ....@....0
+
+No.     Time           Source                Destination           Protocol Length Info
+     32 1.015569509    10.0.2.15             10.0.2.15             TLSv1    112    Server Hello, Certificate, Certificate Request, Server Hello Done
+
+Frame 32: 112 bytes on wire (896 bits), 112 bytes captured (896 bits) on interface 2
+Linux cooked capture
+Internet Protocol Version 4, Src: 10.0.2.15 (10.0.2.15), Dst: 10.0.2.15 (10.0.2.15)
+User Datagram Protocol, Src Port: 1194 (1194), Dst Port: 49782 (49782)
+OpenVPN Protocol
+Secure Sockets Layer
+    TLSv1 Record Layer: Handshake Protocol: Server Hello
+        Content Type: Handshake (22)
+        Version: TLS 1.0 (0x0301)
+        Length: 42
+        Handshake Protocol: Server Hello
+    TLSv1 Record Layer: Handshake Protocol: Certificate
+        Content Type: Handshake (22)
+        Version: TLS 1.0 (0x0301)
+        Length: 1430
+        Handshake Protocol: Certificate
+    TLSv1 Record Layer: Handshake Protocol: Multiple Handshake Messages
+        Content Type: Handshake (22)
+        Version: TLS 1.0 (0x0301)
+        Length: 39
+        Handshake Protocol: Certificate Request
+        Handshake Protocol: Server Hello Done
+
+Frame (112 bytes):
+0000  00 00 03 04 00 06 00 00 00 00 00 00 00 00 08 00   ................
+0010  45 00 00 60 00 00 40 00 40 11 22 70 0a 00 02 0f   E..`..@.@."p....
+0020  0a 00 02 0f 04 aa c2 76 00 4c 18 7b 20 24 bc a6   .......v.L.{ $..
+0030  16 e2 b1 e6 43 16 42 ae fa a8 04 63 f4 d2 b7 04   ....C.B....c....
+0040  7c aa 06 ad 76 58 4b a8 a8 00 00 00 11 57 68 28   |...vXK......Wh(
+0050  48 00 00 00 00 10 15 31 13 30 11 06 03 55 04 03   H......1.0...U..
+0060  0c 0a 4f 70 65 6e 56 50 4e 20 43 41 0e 00 00 00   ..OpenVPN CA....
+Reassembled Message (1526 bytes):
+0000  16 03 01 00 2a 02 00 00 26 03 01 c0 7a 7e ac a5   ....*...&...z~..
+0010  1e 47 41 f0 05 13 1a 83 27 26 c9 53 59 2b 8e 24   .GA.....'&.SY+.$
+0020  85 4e e1 bd 92 bc f4 e3 68 d1 98 00 00 05 00 16   .N......h.......
+0030  03 01 05 96 0b 00 05 92 00 05 8f 00 02 cd 30 82   ..............0.
+0040  02 c9 30 82 01 b1 a0 03 02 01 02 02 01 01 30 0d   ..0...........0.
+0050  06 09 2a 86 48 86 f7 0d 01 01 0b 05 00 30 15 31   ..*.H........0.1
+0060  13 30 11 06 03 55 04 03 0c 0a 4f 70 65 6e 56 50   .0...U....OpenVP
+0070  4e 20 43 41 30 1e 17 0d 31 36 30 36 30 33 30 36   N CA0...16060306
+0080  30 35 35 39 5a 17 0d 32 36 30 36 30 38 30 36 30   0559Z..260608060
+0090  35 35 39 5a 30 19 31 17 30 15 06 03 55 04 03 0c   559Z0.1.0...U...
+00a0  0e 4f 70 65 6e 56 50 4e 20 53 65 72 76 65 72 30   .OpenVPN Server0
+00b0  82 01 22 30 0d 06 09 2a 86 48 86 f7 0d 01 01 01   .."0...*.H......
+00c0  05 00 03 82 01 0f 00 30 82 01 0a 02 82 01 01 00   .......0........
+00d0  99 a4 84 01 4a d0 4d 07 ba 47 12 94 a9 31 3c db   ....J.M..G...1<.
+00e0  81 36 43 f7 7d 48 1d cf 63 b5 38 59 be 63 7a b9   .6C.}H..c.8Y.cz.
+00f0  a3 71 89 25 7f 8e b7 cc 00 9f 0c aa 62 d6 f0 bc   .q.%........b...
+0100  65 17 86 1e c3 44 4b 99 f1 bb 2d c4 77 6d c0 59   e....DK...-.wm.Y
+0110  a1 4d fb 5f 49 2d bf 55 c2 0a d4 bf e4 50 56 b3   .M._I-.U.....PV.
+0120  b9 45 08 ed a0 3f 4f ce 72 49 cc b6 8c fc 9c 73   .E...?O.rI.....s
+0130  43 1b d3 42 f5 26 ac d2 f0 57 37 b3 fa 4d 5f da   C..B.&...W7..M_.
+0140  82 d5 d8 0b 99 5e 1d c6 4b e2 28 6e 31 15 94 6c   .....^..K.(n1..l
+0150  bc db 87 ba c7 76 c0 e1 d0 af 91 3f 3c 39 e3 e9   .....v.....?<9..
+0160  9d d3 e4 35 82 c0 da 0f 8c 4d b6 c8 84 b1 15 cc   ...5.....M......
+0170  61 25 10 c9 39 34 70 df 46 7c 79 cc cb 16 e1 4e   a%..94p.F|y....N
+0180  b1 50 f6 97 b0 9b b8 61 30 11 6e a9 10 58 dc b8   .P.....a0.n..X..
+0190  10 34 5d ac 91 ca b7 71 c2 87 3d cd 62 7c c7 13   .4]....q..=.b|..
+01a0  ef 2c 31 55 e7 16 7a 0e 7c 4c 35 5f 1f 33 07 72   .,1U..z.|L5_.3.r
+01b0  ec 53 41 01 f3 1d c7 3f bf 2a 34 8c 7c 0b 13 4d   .SA....?.*4.|..M
+01c0  4a 69 c5 f1 9c 21 51 0c 88 32 a7 a7 da 27 76 09   Ji...!Q..2...'v.
+01d0  02 03 01 00 01 a3 20 30 1e 30 09 06 03 55 1d 13   ...... 0.0...U..
+01e0  04 02 30 00 30 11 06 09 60 86 48 01 86 f8 42 01   ..0.0...`.H...B.
+01f0  01 04 04 03 02 06 40 30 0d 06 09 2a 86 48 86 f7   ......@0...*.H..
+0200  0d 01 01 0b 05 00 03 82 01 01 00 20 ac 66 bf 60   ........... .f.`
+0210  ef ce ff a1 ee 30 fc 91 39 72 e5 6c 54 b2 5d 68   .....0..9r.lT.]h
+0220  22 a8 4d 7a 46 2f e1 70 a8 00 4a 9d 76 2a 27 7e   ".MzF/.p..J.v*'~
+0230  f7 38 c7 c6 b8 22 89 8c c9 31 d3 3d c6 bd 09 3d   .8..."...1.=...=
+0240  bc b0 15 17 e9 fa 7c 87 71 ec a9 f0 23 d0 4e c9   ......|.q...#.N.
+0250  a4 d6 7c 1d 79 80 2a 22 68 0f aa 24 cb 22 be 9c   ..|.y.*"h..$."..
+0260  ad 5f 82 a7 b2 d0 8d c8 bf 68 ea bf 69 78 7a 8e   ._.......h..ixz.
+0270  68 0b 36 ea f7 a5 8e af a6 7d 46 09 a8 2e 48 47   h.6......}F...HG
+0280  81 41 87 b9 81 18 16 73 54 bb ba d1 ac 7d 7e c2   .A.....sT....}~.
+0290  2a a9 89 ef ce 42 35 09 5d 54 b3 27 bd 4b d7 da   *....B5.]T.'.K..
+02a0  f7 a3 40 22 53 b2 92 09 b5 63 81 74 db c8 93 ad   ..@"S....c.t....
+02b0  25 d7 af d4 61 37 7c 8c c7 a9 e3 8e 88 40 03 40   %...a7|......@.@
+02c0  dc ad 17 49 79 d2 fa 0e 0d c3 14 8e 44 cf 75 73   ...Iy.......D.us
+02d0  e9 f9 f9 a2 1c 3a f3 ab 3c 38 8a 29 2d 78 c3 08   .....:..<8.)-x..
+02e0  22 53 0a b6 24 93 f9 4e dc 37 1d 36 71 9b 67 49   "S..$..N.7.6q.gI
+02f0  49 9c 7d 5b f0 ae bf b2 f0 b6 b6 28 61 35 a4 97   I.}[.......(a5..
+0300  9c 6e 61 3c b1 0a 62 b9 1d 0a 16 00 02 bc 30 82   .na<..b.......0.
+0310  02 b8 30 82 01 a0 a0 03 02 01 02 02 04 57 5a 58   ..0..........WZX
+0320  c6 30 0d 06 09 2a 86 48 86 f7 0d 01 01 0b 05 00   .0...*.H........
+0330  30 15 31 13 30 11 06 03 55 04 03 0c 0a 4f 70 65   0.1.0...U....Ope
+0340  6e 56 50 4e 20 43 41 30 1e 17 0d 31 36 30 36 30   nVPN CA0...16060
+0350  33 30 36 30 35 35 38 5a 17 0d 32 36 30 36 30 38   3060558Z..260608
+0360  30 36 30 35 35 38 5a 30 15 31 13 30 11 06 03 55   060558Z0.1.0...U
+0370  04 03 0c 0a 4f 70 65 6e 56 50 4e 20 43 41 30 82   ....OpenVPN CA0.
+0380  01 22 30 0d 06 09 2a 86 48 86 f7 0d 01 01 01 05   ."0...*.H.......
+0390  00 03 82 01 0f 00 30 82 01 0a 02 82 01 01 00 b4   ......0.........
+03a0  99 5a b2 ee 29 f6 e3 a6 f1 c9 dc dc 00 3c 6c f2   .Z..)........<l.
+03b0  25 37 e5 8f 1a 78 92 5f 57 88 9a ea cb 5a 56 29   %7...x._W....ZV)
+03c0  92 ae 0f 7b 02 53 46 b6 26 bb 69 6d b2 e5 1a 83   ...{.SF.&.im....
+03d0  5b cd ef 26 dc 86 6e fa 5d 42 1b a3 c3 19 09 67   [..&..n.]B.....g
+03e0  1f d8 b9 85 0b 90 c5 7a 47 b6 ae 42 4e 97 6e cf   .......zG..BN.n.
+03f0  2f 61 40 3b fb 07 8c 63 e9 64 fc 4a ea 31 e4 bf   /a@;...c.d.J.1..
+0400  0b 91 8f 42 32 b8 cd f9 c4 e3 00 5b 66 87 82 b3   ...B2......[f...
+0410  da ef e4 75 a8 ce 30 79 de 99 a6 bd ea 87 b3 1f   ...u..0y........
+0420  c7 31 00 6e 70 ff b0 13 5b c3 8e eb 87 99 83 3a   .1.np...[......:
+0430  7f bb 0a 9a c0 95 bf 15 36 fc ff b8 17 be cb ac   ........6.......
+0440  e2 3f 60 9c 02 01 e3 35 4c 8f 7c f4 a5 97 ab 30   .?`....5L.|....0
+0450  c4 92 9a 62 f4 60 12 56 ef cc ad 81 f6 4f bc c8   ...b.`.V.....O..
+0460  4a e2 39 22 e8 58 6b f2 28 87 45 e1 de 76 ee 29   J.9".Xk.(.E..v.)
+0470  fa 21 a2 f7 c2 6f 63 b7 81 00 6b 7f 92 91 26 10   .!...oc...k...&.
+0480  90 be f5 05 0b b1 cb 6e 6e fb 71 1c 10 63 3a 52   .......nn.q..c:R
+0490  0b a7 02 bc 25 01 d8 71 cd 7a 15 a2 c6 0e 37 02   ....%..q.z....7.
+04a0  03 01 00 01 a3 10 30 0e 30 0c 06 03 55 1d 13 04   ......0.0...U...
+04b0  05 30 03 01 01 ff 30 0d 06 09 2a 86 48 86 f7 0d   .0....0...*.H...
+04c0  01 01 0b 05 00 03 82 01 01 00 4c 02 10 3d 8d 95   ..........L..=..
+04d0  dd 4b 1b 34 fa bf 80 93 c2 a4 64 5f 0b a5 62 eb   .K.4......d_..b.
+04e0  8c cb 80 0c 86 1f 17 91 ad ac e2 9b 3e 0c 12 85   ............>...
+04f0  1d 77 29 af 4c bf 36 74 1b dc af e4 af 71 62 b1   .w).L.6t.....qb.
+0500  e6 93 29 2f b6 76 b2 7a e9 77 e5 29 5f 72 45 2e   ..)/.v.z.w.)_rE.
+0510  02 9a 03 3f b1 5f e4 c7 fc b7 b5 2b 98 01 cb 15   ...?._.....+....
+0520  8f dd 8c 44 16 4f d3 ac 0c e2 6a 32 4e 39 99 94   ...D.O....j2N9..
+0530  df be 7a 5e d9 10 96 71 99 00 93 78 25 36 72 51   ..z^...q...x%6rQ
+0540  21 ad a6 e3 73 a6 c9 c7 35 5b 98 e1 62 fa 0c 40   !...s...5[..b..@
+0550  85 65 7a 12 e0 b8 9e 05 08 8d 4c 8c 6c 2b 8c 62   .ez.......L.l+.b
+0560  9b 49 5f 93 bb 7a 67 f2 2f 2b bf c3 b7 14 cd 53   .I_..zg./+.....S
+0570  f4 80 9f da 70 bf d4 d8 07 c0 c6 04 0d ce b8 0d   ....p...........
+0580  c7 db f3 8f e1 4b 5c 05 88 96 e1 97 f9 89 20 9c   .....K\....... .
+0590  db 02 e3 00 e4 1c 25 eb 5a b9 70 60 4d b8 52 ce   ......%.Z.p`M.R.
+05a0  e3 13 d6 36 ba 54 63 6e 7d 51 08 52 5e b2 b8 95   ...6.Tcn}Q.R^...
+05b0  75 2c d6 0c 9a 08 84 9c c5 4c c2 15 02 d3 41 0c   u,.......L....A.
+05c0  9d 46 68 42 a6 55 d3 f5 6b 5f 16 03 01 00 27 0d   .FhB.U..k_....'.
+05d0  00 00 1f 03 01 02 40 00 19 00 17 30 15 31 13 30   ......@....0.1.0
+05e0  11 06 03 55 04 03 0c 0a 4f 70 65 6e 56 50 4e 20   ...U....OpenVPN 
+05f0  43 41 0e 00 00 00                                 CA....
+
+No.     Time           Source                Destination           Protocol Length Info
+     33 1.015594631    10.0.2.15             10.0.2.15             OpenVPN  94     MessageType: P_ACK_V1
+
+Frame 33: 94 bytes on wire (752 bits), 94 bytes captured (752 bits) on interface 2
+Linux cooked capture
+Internet Protocol Version 4, Src: 10.0.2.15 (10.0.2.15), Dst: 10.0.2.15 (10.0.2.15)
+User Datagram Protocol, Src Port: 49782 (49782), Dst Port: 1194 (1194)
+OpenVPN Protocol
+
+0000  00 00 03 04 00 06 00 00 00 00 00 00 00 00 08 00   ................
+0010  45 00 00 4e 00 00 40 00 40 11 22 82 0a 00 02 0f   E..N..@.@.".....
+0020  0a 00 02 0f c2 76 04 aa 00 3a 18 69 28 00 00 00   .....v...:.i(...
+0030  00 00 00 00 01 44 d3 77 4a 19 55 f8 be 13 c3 ee   .....D.wJ.U.....
+0040  11 13 7f 6d e6 de d6 fe 2c 00 00 00 10 57 68 28   ...m....,....Wh(
+0050  49 01 00 00 00 0d 24 bc a6 16 e2 b1 e6 43         I.....$......C
+
+No.     Time           Source                Destination           Protocol Length Info
+     34 1.015651310    10.0.2.15             10.0.2.15             OpenVPN  94     MessageType: P_ACK_V1
+
+Frame 34: 94 bytes on wire (752 bits), 94 bytes captured (752 bits) on interface 2
+Linux cooked capture
+Internet Protocol Version 4, Src: 10.0.2.15 (10.0.2.15), Dst: 10.0.2.15 (10.0.2.15)
+User Datagram Protocol, Src Port: 49782 (49782), Dst Port: 1194 (1194)
+OpenVPN Protocol
+
+0000  00 00 03 04 00 06 00 00 00 00 00 00 00 00 08 00   ................
+0010  45 00 00 4e 00 00 40 00 40 11 22 82 0a 00 02 0f   E..N..@.@.".....
+0020  0a 00 02 0f c2 76 04 aa 00 3a 18 69 28 00 00 00   .....v...:.i(...
+0030  00 00 00 00 01 76 d3 90 f9 02 1a 74 4a 6c a5 5b   .....v.....tJl.[
+0040  35 72 d1 f1 4b f6 f4 54 2f 00 00 00 11 57 68 28   5r..K..T/....Wh(
+0050  49 01 00 00 00 0e 24 bc a6 16 e2 b1 e6 43         I.....$......C
+
+No.     Time           Source                Destination           Protocol Length Info
+     35 1.015706285    10.0.2.15             10.0.2.15             OpenVPN  94     MessageType: P_ACK_V1
+
+Frame 35: 94 bytes on wire (752 bits), 94 bytes captured (752 bits) on interface 2
+Linux cooked capture
+Internet Protocol Version 4, Src: 10.0.2.15 (10.0.2.15), Dst: 10.0.2.15 (10.0.2.15)
+User Datagram Protocol, Src Port: 49782 (49782), Dst Port: 1194 (1194)
+OpenVPN Protocol
+
+0000  00 00 03 04 00 06 00 00 00 00 00 00 00 00 08 00   ................
+0010  45 00 00 4e 00 00 40 00 40 11 22 82 0a 00 02 0f   E..N..@.@.".....
+0020  0a 00 02 0f c2 76 04 aa 00 3a 18 69 28 00 00 00   .....v...:.i(...
+0030  00 00 00 00 01 0a 73 da 77 5e fb ab 9e 0d 2b 4c   ......s.w^....+L
+0040  0a 29 d8 aa 0a b9 82 b9 24 00 00 00 12 57 68 28   .)......$....Wh(
+0050  49 01 00 00 00 0f 24 bc a6 16 e2 b1 e6 43         I.....$......C
+
+No.     Time           Source                Destination           Protocol Length Info
+     36 1.015745861    10.0.2.15             10.0.2.15             OpenVPN  94     MessageType: P_ACK_V1
+
+Frame 36: 94 bytes on wire (752 bits), 94 bytes captured (752 bits) on interface 2
+Linux cooked capture
+Internet Protocol Version 4, Src: 10.0.2.15 (10.0.2.15), Dst: 10.0.2.15 (10.0.2.15)
+User Datagram Protocol, Src Port: 49782 (49782), Dst Port: 1194 (1194)
+OpenVPN Protocol
+
+0000  00 00 03 04 00 06 00 00 00 00 00 00 00 00 08 00   ................
+0010  45 00 00 4e 00 00 40 00 40 11 22 82 0a 00 02 0f   E..N..@.@.".....
+0020  0a 00 02 0f c2 76 04 aa 00 3a 18 69 28 00 00 00   .....v...:.i(...
+0030  00 00 00 00 01 06 ca 7d 83 75 20 a3 20 b0 3c 0e   .......}.u . .<.
+0040  97 eb e9 e5 50 d3 b8 0a 18 00 00 00 13 57 68 28   ....P........Wh(
+0050  49 01 00 00 00 10 24 bc a6 16 e2 b1 e6 43         I.....$......C

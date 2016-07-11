@@ -9,8 +9,12 @@ CFLAGS = -g
 LEX = lex
 CLI_OBJS = bin/lex.yy.o bin/y.tab.o
 
-csrc = $(wildcard common/*.c) \
-		$(wildcard bgp/*.c)
+csrc = $(wildcard common/*.c)	\
+		$(wildcard bgp/*.c)		\
+		$(wildcard ssl/*.c)		\
+		$(wildcard ssl_perf/*.c)	\
+		$(wildcard http/*.c)		\
+		$(wildcard openvpn/*.c)
 
 obj = $(csrc:.c=.o)
 

@@ -43,12 +43,10 @@ startOpenVpnThread(jsonData_t* jsonData) {
 	
 	// Create OPENVPN thread
 	log_debug(flog, "CUST: Create OPENVPN thread.."); fflush(flog);
-/*
 	if (pthread_create(&ovPID, NULL, ovStart, (void*)jsonData)) {
 		log_error(flog, "Error creating OPENVPN Thread"); fflush(flog);
 		exit(1);
 	}
-*/
 	fflush(flog);
 }
 
@@ -80,12 +78,10 @@ startHttpThread (jsonData_t* jsonData) {
 	
 	// Create HTTP thread
 	log_debug(flog, "CUST: Create HTTP thread.."); fflush(flog);
-/*
 	if (pthread_create(&httpPID, NULL, httpStart, (void*)jsonData)) {
 		log_error(flog, "Error creating HTTP Thread"); fflush(flog);
 		exit(1);
 	}
-*/
 	fflush(flog);
 }
 
@@ -95,12 +91,10 @@ startSslPerfThread (jsonData_t* jsonData) {
 	
 	// Create SSL thread
 	log_debug(flog, "CUST: Create SSL thread.."); fflush(flog);
-/*
 	if (pthread_create(&sslPerfPID, NULL, sslPerfStart, (void*)jsonData)) {
 		log_error(flog, "Error creating SSL Perf Thread"); fflush(flog);
 		exit(1);
 	}
-*/
 	fflush(flog);
 }
 
@@ -110,12 +104,10 @@ startSslThread (jsonData_t* jsonData) {
 	
 	// Create SSL thread
 	log_debug(flog, "CUST: Create SSL thread.."); fflush(flog);
-/*
 	if (pthread_create(&sslPID, NULL, sslStart, (void*)jsonData)) {
 		log_error(flog, "Error creating SSL Thread"); fflush(flog);
 		exit(1);
 	}
-*/
 	fflush(flog);
 }
 
