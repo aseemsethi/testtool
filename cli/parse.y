@@ -13,14 +13,14 @@ config: lines config
 		| lines
 		;
 lines:	expr NL
-		| cmds NL
+		| commonCmds NL
 		| bgpCmds NL
 		| NL
 		;  		
 expr:   PROTOCOL BGP     { printf("Set protocol to BGP\n"); }
 		| PROTOCOL ERROR   { printf("Set protocol error\n"); }
 		;
-cmds:	SHOW CMD        { printf("...SHOW %s\n", $2.s); }		
+commonCmds:	SHOW CMD        { printf("...SHOW %s\n", $2.s); }		
 		| HELP			{ printf("...HELP\n"); }
 		| END			{ printf("...Protocol END\n"); }
 		| SHOW HELP		{ printf("...Help Cmds"); }

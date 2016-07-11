@@ -1,3 +1,23 @@
+/**
+ * This is the main program for Test Tool.
+ * This reads the input parameters to the program and then reads the 
+ * config.json file, either at /var/montT/<id>/config.json or as the last
+ * parameter to the program.
+ *
+ */
+
+/**
+ * @file monitor.c
+ * @author Aseem Sethi
+ * @date 10 July 2016
+ * @brief File containing example of doxygen usage for quick reference.
+ *
+ * Here typically goes a more extensive explanation of what the header
+ * defines. Doxygens tags are words preceeded by either a backslash @\
+ * or by an at symbol @@.
+ * @see http://www.github.com
+ */
+
 #include "stdio.h"
 #include "stdlib.h"
 #include "string.h"
@@ -32,6 +52,15 @@ startOpenVpnThread(jsonData_t* jsonData) {
 	fflush(flog);
 }
 
+/**
+ * @param param1 Description of the first parameter of the function.
+ * @param param2 The second one, which follows @p param1.
+ * @return Describe what the function returns.
+ * @see Box_The_Second_Function
+ * @see Box_The_Last_One
+ * @see http://website/
+ * @note Something to note.
+ */
 startBgpThread (jsonData_t* jsonData) {
 	struct stat st;
 	char filePath[100];

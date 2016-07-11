@@ -20,7 +20,7 @@ void yyerror(char*);
 <BGP_s>end			{printf("proto>"); BEGIN 0; return END;}
 <BGP_s>[A-Za-z0-9]+	{yylval.s = strdup(yytext); return CMD;}
 <BGP_s>\n			{printf("bgp>"); return NL;}
-\n					{printf("proto>"); return NL;}
+\n					{printf("select>"); return NL;}
 [A-Za-z0-9]+		;
 [ \t]				;
 [\?]				return HELP;

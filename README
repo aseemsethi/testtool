@@ -3,6 +3,12 @@ This is a Monitor Application v2.0. Testing support for the following are implem
 - HTTP Performance
 - IKEv2 Functional and Performance
 
+To generate Documentation
+-------------------------
+doxygen -g  // to generate Doxyfile
+vi Doxyfile  // set options - RECURSIVE=YES
+doxygen Doxyfile  // run the tool
+
 Clone a new tree
 ----------------
 git clone https://aseemsethi@github.com/aseemsethi/monitor.git
