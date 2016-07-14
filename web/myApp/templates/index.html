@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}
+    Traffic Monitor - {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+    <h2>Customer Configurations</h2>
+    <!-- here’s the variable we are passing in -->
+	<p> 
+<!--
+		{% if number >= 10 %}
+			Number {{number}} is Greater than equal to 10
+		{% else %}
+			Number {{number}} is Smaller than 10
+		{% endif %}
+-->
+		{% for config in configs  %}
+			<a href ="{% url 'cfg_detail' slug=config.slug %}">Customer:{{config.custID}}</a>
+			Customer: ID:{{ config.custID }}, Server:{{ config.serverIP }}
+<!--
+			Protocol: {{ config.protocol }}, Port: {{ config.port }}
+-->
+			<p></p>
+		{% endfor %}
+	</p>
+{% endblock content %}

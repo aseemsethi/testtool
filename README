@@ -1,26 +1,33 @@
+Summary
+-------
 This is a Monitor Application v2.0. Testing support for the following are implemented.
-- SSL Functionaland Performance
+- SSL Functional and Performance
 - HTTP Performance
 - IKEv2 Functional and Performance
+- OpenVPN Functional Testing
+- BGP Functional Testing
 
 To generate Documentation
 -------------------------
-doxygen -g  // to generate Doxyfile
-vi Doxyfile  // set options - RECURSIVE=YES
-doxygen Doxyfile  // run the tool
+The following are done only once.
+$ doxygen -g  // to generate Doxyfile
+$ vi Doxyfile  // set options - RECURSIVE=YES
+Run the following after adding more metatags to .c/.h files to generate html documentation in ./html directory.
+$ doxygen Doxyfile  // run the tool
 
 Clone a new tree
 ----------------
 git clone https://aseemsethi@github.com/aseemsethi/monitor.git
 
 Libraries to be installed:
+--------------------------
 openssl, openssl-devel, curl, curl-devel, expat
 yum install gcc-c++
 
-The Monitor Application is a single binary called "mont_cust". This is spawned as follows :
- For SSL Function Test: ./mont_cust 100 ssl
- For SSL Performance Test: ./mont_cust 100 ssl_perf
- For HTTP Test: ./mont_cust 100 http
+The Monitor Application is a single binary called "tool". This is spawned as follows :
+ For SSL Function Test: ./tool 100 ssl
+ For SSL Performance Test: ./tool 100 ssl_perf
+ For HTTP Test: ./tool 100 http
 
 There are many Assessment Tools today that can also be used. One such list of tools is at https://github.com/ssllabs/research/wiki/Assessment-Tools.  A list of cve ids is maintained at: https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=openssl
 Some other tools that are used for HTTP testing are burp, wrk
@@ -28,7 +35,7 @@ Some other tools that are used for HTTP testing are burp, wrk
 Executing
 =========
 There are 2 ways to run the tool
-a) Run it from shell "./mont_cust 100 openvpn". This reads the config from /var/,mont/100/config.json.
+a) Run it from shell "./tool 100 openvpn". This reads the config from /var/,mont/100/config.json.
 b) Run it using the Django framework. For, this one needs to configure the various parameters in the Edit screen, and these then go as a parameter to the ./mont_cust program. Instead of reading the config file at /var/mont/100/config.json, it accepts another parameter, which is the configuration file in json format. From that point the code path is the same.
 
 Logging

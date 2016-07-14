@@ -1,0 +1,37 @@
+{% load staticfiles %}
+<!doctype html>
+<html>
+<head>
+    <title>
+         {% block title %}My Monitor{% endblock title %}
+    </title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    {% block header %}{% endblock header %}
+</head>
+<body>
+    <header>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+	  <div class="container-fluid">
+   		 <div class="navbar-header">
+   		   <a class="navbar-brand" href="{% url 'home' %}">MyMonitor</a>
+   		 </div>
+   		 <ul class="nav navbar-nav">
+   		   <li class="active"><a href="{% url 'home' %}">Home</a></li>
+   		   <li><a href="{% url 'about' %}">About</a></li>
+   		   <li><a href="{% url 'contact' %}">Contact</a></li> 
+   		 </ul>
+  	 </div>
+	</nav>
+    </header>
+	<br> <br> <br>
+    {% block content %}{% endblock content %}
+    {% block footer %}{% endblock footer %}
+</body>
+</html>

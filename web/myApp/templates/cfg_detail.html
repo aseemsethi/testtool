@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}
+    Configuration Details - {{ block.super }}
+{% endblock title %}
+<button type="button" class="btn btn-success">Edit</button>
+
+{% block content %}
+    <h3>Protocol Edit/Run</h3>
+    <!-- here’s the variable we are passing in -->
+	<p> 
+		<h4>Customer: ID:{{configs.custID}}, Server:{{configs.serverIP}}</h4>
+	{% if running == True %}
+		<p>Stats: Running <span class="glyphicon glyphicon-ok"></span></p> 
+	{% else %}
+		<p>Status: Stopped <span class="glyphicon glyphicon-remove"></span></p> 
+	{% endif %}
+		&nbsp;&nbsp;
+	<center>
+		<h4>Edit Configuration</h4>
+		<a href="{% url 'edit_cfg' slug=configs.slug proto="bgp"%}" class="btn btn-success btn-md"><span class="glyphicon glyphicon-edit"></span>BGP</a>
+		<a href="{% url 'edit_cfg' slug=configs.slug proto="ssl"%}" class="btn btn-success btn-md"><span class="glyphicon glyphicon-edit"></span>SSL</a>
+		<a href="{% url 'edit_cfg' slug=configs.slug proto="ssl_perf"%}" class="btn btn-success btn-md"><span class="glyphicon glyphicon-edit"></span>SSL_PERF</a>
+		<a href="{% url 'edit_cfg' slug=configs.slug proto="http_perf"%}" class="btn btn-success btn-md"><span class="glyphicon glyphicon-edit"></span>HTTP_PERF</a>
+		<a href="{% url 'edit_cfg' slug=configs.slug proto="openvpn"%}" class="btn btn-success btn-md"><span class="glyphicon glyphicon-edit"></span>OPENVPN</a>
+		<br> <br>
+		<h4>Run Tests</h4>
+		<a class="btn btn-primary" href="{% url 'run_cfg' slug=configs.slug proto="bgp"%}">BGP</a>
+		<a class="btn btn-primary" href="{% url 'run_cfg' slug=configs.slug proto="ssl"%}">SSL</a>
+		<a class="btn btn-primary" href="{% url 'run_cfg' slug=configs.slug proto="ssl_perf"%}">SSL_PERF</a>
+		<a class="btn btn-primary" href="{% url 'run_cfg' slug=configs.slug proto="http_perf"%}">HTTP_PERF</a>
+		<a class="btn btn-primary" href="{% url 'run_cfg' slug=configs.slug proto="openvpn"%}">OPENVPN</a>
+	</center>
+	</p>
+	<br> <center>
+	<h4>Test Status</h4>
+		<a href="{% url 'edit_cfg' slug=configs.slug proto="bgp"%}" class="btn btn-success btn-md"><span class="glyphicon glyphicon-edit"></span>BGP</a>
+		<a href="{% url 'edit_cfg' slug=configs.slug proto="ssl"%}" class="btn btn-success btn-md"><span class="glyphicon glyphicon-edit"></span>SSL</a>
+	</center>
+{% endblock content %}
+
