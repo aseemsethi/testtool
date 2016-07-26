@@ -2,10 +2,11 @@
 #include <stdio.h>
 #include "parse.h"
 int yylex(void);
+int proto;
 %}
 
 %union { char *s; int i; } 
-%token PROTOCOL BGP OV SHOW HELP CMD END ERROR NL
+%token PROTOCOL BGP OV SSL SHOW HELP CMD END ERROR NL
 %token UPDATE WITHDRAW
 
 %%
@@ -15,10 +16,12 @@ config: lines config
 lines:	expr NL
 		| commonCmds NL
 		| bgpCmds NL
+		| sslCmds NL
 		| NL
 		;  		
-expr:   PROTOCOL BGP     { printf("Set protocol to BGP\n"); }
-		| PROTOCOL ERROR   { printf("Set protocol error\n"); }
+expr:   PROTOCOL BGP     { proto = BGP; printf("Set protocol to BGP\n"); }
+		| PROTOCOL SSL   { proto = SSL; printf("Set protocol to SSL\n"); }
+		| PROTOCOL ERROR { printf("Set protocol error\n"); }
 		;
 commonCmds:	SHOW CMD        { printf("...SHOW %s\n", $2.s); }		
 		| HELP			{ printf("...HELP\n"); }
@@ -33,6 +36,8 @@ bgpCmds: UPDATE CMD		{ printf("...update %s\n", $2.s);
 							CLIsendWithdraw($2.s);}		
 		| UPDATE		{ printf("...Please enter file"); }
 		| WITHDRAW		{ printf("...Please enter file"); }
+		;
+sslCmds: UPDATE CMD		{ printf("...update %s\n", $2.s); }	
 		;
 
 %%

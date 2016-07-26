@@ -36,7 +36,10 @@ Executing
 =========
 There are 2 ways to run the tool
 a) Run it from shell "./tool 100 openvpn". This reads the config from /var/,mont/100/config.json.
-b) Run it using the Django framework. For, this one needs to configure the various parameters in the Edit screen, and these then go as a parameter to the ./mont_cust program. Instead of reading the config file at /var/mont/100/config.json, it accepts another parameter, which is the configuration file in json format. From that point the code path is the same.
+b) Run it using the Django framework. Start the server as follows:
+$ source ~/venv/bin/activate
+$ cd web; python manage.py runserver
+For, this one needs to configure the various parameters in the Edit screen, and these then go as a parameter to the ./mont_cust program. Instead of reading the config file at /var/mont/100/config.json, it accepts another parameter, which is the configuration file in json format. From that point the code path is the same.
 
 Logging
 =======
