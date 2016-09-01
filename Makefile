@@ -18,13 +18,15 @@ csrc = $(wildcard common/*.c)	\
 
 obj = $(csrc:.c=.o)
 
-LDFLAGS = -Lbin -ljsmn -lexpat -lpthread -lcrypto -lssl -lcurl -ll -lm
+LDFLAGS = -Lbin -ljsmn -lexpat -lpthread -lcrypto -lssl -lcurl 
+# -ll -lm
 
 # Targets 
 all : OPENSRC $(MONT)
 	cp $(MONT) ${INSTDIR}
 
 OPENSRC: 
+	(mkdir -p bin)
 	(cd jsmn; make all)
 	(cd cli; make)
 
